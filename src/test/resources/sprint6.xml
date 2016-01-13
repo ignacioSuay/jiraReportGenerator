@@ -14,999 +14,1069 @@ https://wwarninfo.atlassian.net/sr/jira.issueviews:searchrequest-xml/temp/Search
         <title>JIRA</title>
         <link>https://wwarninfo.atlassian.net/issues/?jql=Sprint+%3D+6</link>
         <description>An XML representation of a search request</description>
-                <language>en-uk</language>
-                        <issue start="0" end="16" total="16"/>
-                <build-info>
+        <language>en-uk</language>
+        <issue start="0" end="16" total="16"/>
+        <build-info>
             <version>7.1.0-OD-04-012</version>
             <build-number>71001</build-number>
             <build-date>07-01-2016</build-date>
         </build-info>
-<item>
+        <item>
             <title>[IN-394] ICE2 point to new chassis structure</title>
-                <link>https://wwarninfo.atlassian.net/browse/IN-394</link>
-                <project id="10001" key="IN">informatics</project>
-                    <description></description>
-                <environment></environment>
-        <key id="11401">IN-394</key>
+            <link>https://wwarninfo.atlassian.net/browse/IN-394</link>
+            <project id="10001" key="IN">informatics</project>
+            <description></description>
+            <environment></environment>
+            <key id="11401">IN-394</key>
             <summary>ICE2 point to new chassis structure</summary>
-                <type id="10002" iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">Task</type>
-                                            <priority id="1" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/highest.svg">Highest</priority>
-                        <status id="10000" iconUrl="https://wwarninfo.atlassian.net/" description="">To Do</status>
-                    <statusCategory id="2" key="new" colorName="blue-gray"/>
-                                    <resolution id="-1">Unresolved</resolution>
-                                        <assignee username="admin">Ignacio Suay [Administrator]</assignee>
-                                    <reporter username="admin">Ignacio Suay [Administrator]</reporter>
-                        <labels>
-                    </labels>
-                <created>Mon, 11 Jan 2016 16:12:14 +0000</created>
-                <updated>Mon, 11 Jan 2016 16:12:14 +0000</updated>
-                                                                                <due></due>
-                            <votes>0</votes>
-                                    <watches>1</watches>
-                                    <timeoriginalestimate seconds="21600">6 hours</timeoriginalestimate>
-                            <timeestimate seconds="21600">6 hours</timeestimate>
-                                                <attachments>
-                    </attachments>
-                <subtasks>
-                    </subtasks>
-                <customfields>
-                                                                            <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
-                        <customfieldname>Epic Link</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>IN-97</customfieldvalue>
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                                                                                                                                                                                                                                                                                    <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
-                        <customfieldname>Rank</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>0|i001sn:</customfieldvalue>
+            <type id="10002"
+                  iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">
+                Task
+            </type>
+            <priority id="1" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/highest.svg">Highest
+            </priority>
+            <status id="10000" iconUrl="https://wwarninfo.atlassian.net/" description="">To Do</status>
+            <statusCategory id="2" key="new" colorName="blue-gray"/>
+            <resolution id="-1">Unresolved</resolution>
+            <assignee username="admin">Ignacio Suay [Administrator]</assignee>
+            <reporter username="admin">Ignacio Suay [Administrator]</reporter>
+            <labels>
+            </labels>
+            <created>Mon, 11 Jan 2016 16:12:14 +0000</created>
+            <updated>Mon, 11 Jan 2016 16:12:14 +0000</updated>
+            <due></due>
+            <votes>0</votes>
+            <watches>1</watches>
+            <timeoriginalestimate seconds="21600">6 hours</timeoriginalestimate>
+            <timeestimate seconds="21600">6 hours</timeestimate>
+            <attachments>
+            </attachments>
+            <subtasks>
+            </subtasks>
+            <customfields>
+                <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
+                    <customfieldname>Epic Link</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>IN-97</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
+                    <customfieldname>Rank</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>0|i001sn:</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
-                        <customfieldname>Sprint</customfieldname>
-                        <customfieldvalues>
-                                <customfieldvalue id="6">Sprint 6</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
+                    <customfieldname>Sprint</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue id="6">Sprint 6</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                        <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
-                        <customfieldname>Testing Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                                                                            </customfields>
-    </item>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
+                    <customfieldname>Testing Status</customfieldname>
+                    <customfieldvalues>
 
-<item>
+                    </customfieldvalues>
+                </customfield>
+            </customfields>
+        </item>
+
+        <item>
             <title>[IN-392] saving message keeps spinning forever in CE</title>
-                <link>https://wwarninfo.atlassian.net/browse/IN-392</link>
-                <project id="10001" key="IN">informatics</project>
-                    <description></description>
-                <environment></environment>
-        <key id="11302">IN-392</key>
+            <link>https://wwarninfo.atlassian.net/browse/IN-392</link>
+            <project id="10001" key="IN">informatics</project>
+            <description></description>
+            <environment></environment>
+            <key id="11302">IN-392</key>
             <summary>saving message keeps spinning forever in CE</summary>
-                <type id="10002" iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">Task</type>
-                                            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium</priority>
-                        <status id="10001" iconUrl="https://wwarninfo.atlassian.net/" description="">Done</status>
-                    <statusCategory id="3" key="done" colorName="green"/>
-                                    <resolution id="10000">Done</resolution>
-                                        <assignee username="admin">Ignacio Suay [Administrator]</assignee>
-                                    <reporter username="admin">Ignacio Suay [Administrator]</reporter>
-                        <labels>
-                    </labels>
-                <created>Fri, 8 Jan 2016 15:50:25 +0000</created>
-                <updated>Fri, 8 Jan 2016 16:15:17 +0000</updated>
-                            <resolved>Fri, 8 Jan 2016 16:15:17 +0000</resolved>
-                                                                        <due></due>
-                            <votes>0</votes>
-                                    <watches>1</watches>
-                                    <timeoriginalestimate seconds="14400">4 hours</timeoriginalestimate>
-                            <timeestimate seconds="7200">2 hours</timeestimate>
-                            <timespent seconds="7200">2 hours</timespent>
-                                        <attachments>
-                    </attachments>
-                <subtasks>
-                    </subtasks>
-                <customfields>
-                                                                            <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
-                        <customfieldname>Epic Link</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>IN-97</customfieldvalue>
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                                                                                                                                                                                                                                                                                    <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
-                        <customfieldname>Rank</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>0|i001s7:</customfieldvalue>
+            <type id="10002"
+                  iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">
+                Task
+            </type>
+            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium
+            </priority>
+            <status id="10001" iconUrl="https://wwarninfo.atlassian.net/" description="">Done</status>
+            <statusCategory id="3" key="done" colorName="green"/>
+            <resolution id="10000">Done</resolution>
+            <assignee username="admin">Ignacio Suay [Administrator]</assignee>
+            <reporter username="admin">Ignacio Suay [Administrator]</reporter>
+            <labels>
+            </labels>
+            <created>Fri, 8 Jan 2016 15:50:25 +0000</created>
+            <updated>Fri, 8 Jan 2016 16:15:17 +0000</updated>
+            <resolved>Fri, 8 Jan 2016 16:15:17 +0000</resolved>
+            <due></due>
+            <votes>0</votes>
+            <watches>1</watches>
+            <timeoriginalestimate seconds="14400">4 hours</timeoriginalestimate>
+            <timeestimate seconds="7200">2 hours</timeestimate>
+            <timespent seconds="7200">2 hours</timespent>
+            <attachments>
+            </attachments>
+            <subtasks>
+            </subtasks>
+            <customfields>
+                <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
+                    <customfieldname>Epic Link</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>IN-97</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
+                    <customfieldname>Rank</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>0|i001s7:</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
-                        <customfieldname>Sprint</customfieldname>
-                        <customfieldvalues>
-                                <customfieldvalue id="6">Sprint 6</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
+                    <customfieldname>Sprint</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue id="6">Sprint 6</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                        <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
-                        <customfieldname>Testing Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                                                                            <customfield id="customfield_10001" key="com.atlassian.jira.ext.charting:timeinstatus">
-                        <customfieldname>[CHART] Time in Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                    </customfields>
-    </item>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
+                    <customfieldname>Testing Status</customfieldname>
+                    <customfieldvalues>
 
-<item>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10001" key="com.atlassian.jira.ext.charting:timeinstatus">
+                    <customfieldname>[CHART] Time in Status</customfieldname>
+                    <customfieldvalues>
+
+                    </customfieldvalues>
+                </customfield>
+            </customfields>
+        </item>
+
+        <item>
             <title>[IN-391] Install Ansible</title>
-                <link>https://wwarninfo.atlassian.net/browse/IN-391</link>
-                <project id="10001" key="IN">informatics</project>
-                    <description>&lt;p&gt;Install and try to use Ansible to start central management of WWARN servers&lt;/p&gt;</description>
-                <environment></environment>
-        <key id="11301">IN-391</key>
+            <link>https://wwarninfo.atlassian.net/browse/IN-391</link>
+            <project id="10001" key="IN">informatics</project>
+            <description>&lt;p&gt;Install and try to use Ansible to start central management of WWARN
+                servers&lt;/p&gt;</description>
+            <environment></environment>
+            <key id="11301">IN-391</key>
             <summary>Install Ansible</summary>
-                <type id="10002" iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">Task</type>
-                                            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium</priority>
-                        <status id="10000" iconUrl="https://wwarninfo.atlassian.net/" description="">To Do</status>
-                    <statusCategory id="2" key="new" colorName="blue-gray"/>
-                                    <resolution id="-1">Unresolved</resolution>
-                                        <assignee username="jakub.miziolek">Jakub Miziolek</assignee>
-                                    <reporter username="jakub.miziolek">Jakub Miziolek</reporter>
-                        <labels>
-                    </labels>
-                <created>Wed, 6 Jan 2016 11:40:19 +0000</created>
-                <updated>Wed, 6 Jan 2016 11:40:19 +0000</updated>
-                                                                                <due></due>
-                            <votes>0</votes>
-                                    <watches>1</watches>
-                                    <timeoriginalestimate seconds="86400">3 days</timeoriginalestimate>
-                            <timeestimate seconds="86400">3 days</timeestimate>
-                                                <attachments>
-                    </attachments>
-                <subtasks>
-                    </subtasks>
-                <customfields>
-                                                                            <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
-                        <customfieldname>Epic Link</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>IN-176</customfieldvalue>
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                                                                                                                                                                                                                                                                                    <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
-                        <customfieldname>Rank</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>0|i001rz:</customfieldvalue>
+            <type id="10002"
+                  iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">
+                Task
+            </type>
+            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium
+            </priority>
+            <status id="10000" iconUrl="https://wwarninfo.atlassian.net/" description="">To Do</status>
+            <statusCategory id="2" key="new" colorName="blue-gray"/>
+            <resolution id="-1">Unresolved</resolution>
+            <assignee username="jakub.miziolek">Jakub Miziolek</assignee>
+            <reporter username="jakub.miziolek">Jakub Miziolek</reporter>
+            <labels>
+            </labels>
+            <created>Wed, 6 Jan 2016 11:40:19 +0000</created>
+            <updated>Wed, 6 Jan 2016 11:40:19 +0000</updated>
+            <due></due>
+            <votes>0</votes>
+            <watches>1</watches>
+            <timeoriginalestimate seconds="86400">3 days</timeoriginalestimate>
+            <timeestimate seconds="86400">3 days</timeestimate>
+            <attachments>
+            </attachments>
+            <subtasks>
+            </subtasks>
+            <customfields>
+                <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
+                    <customfieldname>Epic Link</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>IN-176</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
+                    <customfieldname>Rank</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>0|i001rz:</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
-                        <customfieldname>Sprint</customfieldname>
-                        <customfieldvalues>
-                                <customfieldvalue id="6">Sprint 6</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
+                    <customfieldname>Sprint</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue id="6">Sprint 6</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                        <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
-                        <customfieldname>Testing Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                                                                            </customfields>
-    </item>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
+                    <customfieldname>Testing Status</customfieldname>
+                    <customfieldvalues>
 
-<item>
+                    </customfieldvalues>
+                </customfield>
+            </customfields>
+        </item>
+
+        <item>
             <title>[IN-390] Make tests of application using R &amp; TeX on new app server</title>
-                <link>https://wwarninfo.atlassian.net/browse/IN-390</link>
-                <project id="10001" key="IN">informatics</project>
-                    <description>&lt;p&gt;I&apos;d like to deploy PCE on app-live server to check how it works with freshly installed libraries.&lt;/p&gt;</description>
-                <environment></environment>
-        <key id="11300">IN-390</key>
+            <link>https://wwarninfo.atlassian.net/browse/IN-390</link>
+            <project id="10001" key="IN">informatics</project>
+            <description>&lt;p&gt;I&apos;d like to deploy PCE on app-live server to check how it works with freshly
+                installed libraries.&lt;/p&gt;</description>
+            <environment></environment>
+            <key id="11300">IN-390</key>
             <summary>Make tests of application using R &amp; TeX on new app server</summary>
-                <type id="10002" iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">Task</type>
-                                            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium</priority>
-                        <status id="10000" iconUrl="https://wwarninfo.atlassian.net/" description="">To Do</status>
-                    <statusCategory id="2" key="new" colorName="blue-gray"/>
-                                    <resolution id="-1">Unresolved</resolution>
-                                        <assignee username="jakub.miziolek">Jakub Miziolek</assignee>
-                                    <reporter username="jakub.miziolek">Jakub Miziolek</reporter>
-                        <labels>
-                    </labels>
-                <created>Wed, 6 Jan 2016 11:39:10 +0000</created>
-                <updated>Wed, 6 Jan 2016 11:39:10 +0000</updated>
-                                                                                <due></due>
-                            <votes>0</votes>
-                                    <watches>1</watches>
-                                    <timeoriginalestimate seconds="28800">1 day</timeoriginalestimate>
-                            <timeestimate seconds="28800">1 day</timeestimate>
-                                                <attachments>
-                    </attachments>
-                <subtasks>
-                    </subtasks>
-                <customfields>
-                                                                            <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
-                        <customfieldname>Epic Link</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>IN-176</customfieldvalue>
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                                                                                                                                                                                                                                                                                    <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
-                        <customfieldname>Rank</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>0|i001rr:</customfieldvalue>
+            <type id="10002"
+                  iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">
+                Task
+            </type>
+            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium
+            </priority>
+            <status id="10000" iconUrl="https://wwarninfo.atlassian.net/" description="">To Do</status>
+            <statusCategory id="2" key="new" colorName="blue-gray"/>
+            <resolution id="-1">Unresolved</resolution>
+            <assignee username="jakub.miziolek">Jakub Miziolek</assignee>
+            <reporter username="jakub.miziolek">Jakub Miziolek</reporter>
+            <labels>
+            </labels>
+            <created>Wed, 6 Jan 2016 11:39:10 +0000</created>
+            <updated>Wed, 6 Jan 2016 11:39:10 +0000</updated>
+            <due></due>
+            <votes>0</votes>
+            <watches>1</watches>
+            <timeoriginalestimate seconds="28800">1 day</timeoriginalestimate>
+            <timeestimate seconds="28800">1 day</timeestimate>
+            <attachments>
+            </attachments>
+            <subtasks>
+            </subtasks>
+            <customfields>
+                <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
+                    <customfieldname>Epic Link</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>IN-176</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
+                    <customfieldname>Rank</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>0|i001rr:</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
-                        <customfieldname>Sprint</customfieldname>
-                        <customfieldvalues>
-                                <customfieldvalue id="6">Sprint 6</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
+                    <customfieldname>Sprint</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue id="6">Sprint 6</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                        <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
-                        <customfieldname>Testing Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                                                                            </customfields>
-    </item>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
+                    <customfieldname>Testing Status</customfieldname>
+                    <customfieldvalues>
 
-<item>
+                    </customfieldvalues>
+                </customfield>
+            </customfields>
+        </item>
+
+        <item>
             <title>[IN-389] Configure Tomcat monitoring in Zabbix</title>
-                <link>https://wwarninfo.atlassian.net/browse/IN-389</link>
-                <project id="10001" key="IN">informatics</project>
-                    <description>&lt;p&gt;Configure JMX monitoring of Tomcat server running parameters via Zabbix&lt;/p&gt;</description>
-                <environment></environment>
-        <key id="11206">IN-389</key>
+            <link>https://wwarninfo.atlassian.net/browse/IN-389</link>
+            <project id="10001" key="IN">informatics</project>
+            <description>&lt;p&gt;Configure JMX monitoring of Tomcat server running parameters via
+                Zabbix&lt;/p&gt;</description>
+            <environment></environment>
+            <key id="11206">IN-389</key>
             <summary>Configure Tomcat monitoring in Zabbix</summary>
-                <type id="10002" iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">Task</type>
-                                            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium</priority>
-                        <status id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/statuses/inprogress.png" description="This issue is being actively worked on at the moment by the assignee.">In Progress</status>
-                    <statusCategory id="4" key="indeterminate" colorName="yellow"/>
-                                    <resolution id="-1">Unresolved</resolution>
-                                        <assignee username="jakub.miziolek">Jakub Miziolek</assignee>
-                                    <reporter username="jakub.miziolek">Jakub Miziolek</reporter>
-                        <labels>
-                    </labels>
-                <created>Tue, 5 Jan 2016 15:17:50 +0000</created>
-                <updated>Wed, 6 Jan 2016 15:30:34 +0000</updated>
-                                                                                <due></due>
-                            <votes>0</votes>
-                                    <watches>1</watches>
-                                    <timeoriginalestimate seconds="57600">2 days</timeoriginalestimate>
-                            <timeestimate seconds="57600">2 days</timeestimate>
-                                                <attachments>
-                    </attachments>
-                <subtasks>
-                    </subtasks>
-                <customfields>
-                                                                            <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
-                        <customfieldname>Epic Link</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>IN-176</customfieldvalue>
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                                                                                                                                                                                                                                                                                    <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
-                        <customfieldname>Rank</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>0|i001rj:</customfieldvalue>
+            <type id="10002"
+                  iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">
+                Task
+            </type>
+            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium
+            </priority>
+            <status id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/statuses/inprogress.png"
+                    description="This issue is being actively worked on at the moment by the assignee.">In Progress
+            </status>
+            <statusCategory id="4" key="indeterminate" colorName="yellow"/>
+            <resolution id="-1">Unresolved</resolution>
+            <assignee username="jakub.miziolek">Jakub Miziolek</assignee>
+            <reporter username="jakub.miziolek">Jakub Miziolek</reporter>
+            <labels>
+            </labels>
+            <created>Tue, 5 Jan 2016 15:17:50 +0000</created>
+            <updated>Wed, 6 Jan 2016 15:30:34 +0000</updated>
+            <due></due>
+            <votes>0</votes>
+            <watches>1</watches>
+            <timeoriginalestimate seconds="57600">2 days</timeoriginalestimate>
+            <timeestimate seconds="57600">2 days</timeestimate>
+            <attachments>
+            </attachments>
+            <subtasks>
+            </subtasks>
+            <customfields>
+                <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
+                    <customfieldname>Epic Link</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>IN-176</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
+                    <customfieldname>Rank</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>0|i001rj:</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
-                        <customfieldname>Sprint</customfieldname>
-                        <customfieldvalues>
-                                <customfieldvalue id="6">Sprint 6</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
+                    <customfieldname>Sprint</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue id="6">Sprint 6</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                        <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
-                        <customfieldname>Testing Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                                                                            </customfields>
-    </item>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
+                    <customfieldname>Testing Status</customfieldname>
+                    <customfieldvalues>
 
-<item>
+                    </customfieldvalues>
+                </customfield>
+            </customfields>
+        </item>
+
+        <item>
             <title>[IN-388] improve malariaApp readiability - space between sections</title>
-                <link>https://wwarninfo.atlassian.net/browse/IN-388</link>
-                <project id="10001" key="IN">informatics</project>
-                    <description></description>
-                <environment></environment>
-        <key id="11205">IN-388</key>
+            <link>https://wwarninfo.atlassian.net/browse/IN-388</link>
+            <project id="10001" key="IN">informatics</project>
+            <description></description>
+            <environment></environment>
+            <key id="11205">IN-388</key>
             <summary>improve malariaApp readiability - space between sections</summary>
-                <type id="10002" iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">Task</type>
-                                            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium</priority>
-                        <status id="10001" iconUrl="https://wwarninfo.atlassian.net/" description="">Done</status>
-                    <statusCategory id="3" key="done" colorName="green"/>
-                                    <resolution id="10000">Done</resolution>
-                                        <assignee username="admin">Ignacio Suay [Administrator]</assignee>
-                                    <reporter username="admin">Ignacio Suay [Administrator]</reporter>
-                        <labels>
-                    </labels>
-                <created>Tue, 5 Jan 2016 14:16:43 +0000</created>
-                <updated>Wed, 6 Jan 2016 12:57:30 +0000</updated>
-                            <resolved>Wed, 6 Jan 2016 12:57:30 +0000</resolved>
-                                                                        <due></due>
-                            <votes>0</votes>
-                                    <watches>1</watches>
-                                    <timeoriginalestimate seconds="21600">6 hours</timeoriginalestimate>
-                            <timeestimate seconds="14400">4 hours</timeestimate>
-                            <timespent seconds="7200">2 hours</timespent>
-                                        <attachments>
-                    </attachments>
-                <subtasks>
-                    </subtasks>
-                <customfields>
-                                                                            <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
-                        <customfieldname>Epic Link</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>IN-97</customfieldvalue>
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                                                                                                                                                                                                                                                                                    <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
-                        <customfieldname>Rank</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>0|hzzzxj:i</customfieldvalue>
+            <type id="10002"
+                  iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">
+                Task
+            </type>
+            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium
+            </priority>
+            <status id="10001" iconUrl="https://wwarninfo.atlassian.net/" description="">Done</status>
+            <statusCategory id="3" key="done" colorName="green"/>
+            <resolution id="10000">Done</resolution>
+            <assignee username="admin">Ignacio Suay [Administrator]</assignee>
+            <reporter username="admin">Ignacio Suay [Administrator]</reporter>
+            <labels>
+            </labels>
+            <created>Tue, 5 Jan 2016 14:16:43 +0000</created>
+            <updated>Wed, 6 Jan 2016 12:57:30 +0000</updated>
+            <resolved>Wed, 6 Jan 2016 12:57:30 +0000</resolved>
+            <due></due>
+            <votes>0</votes>
+            <watches>1</watches>
+            <timeoriginalestimate seconds="21600">6 hours</timeoriginalestimate>
+            <timeestimate seconds="14400">4 hours</timeestimate>
+            <timespent seconds="7200">2 hours</timespent>
+            <attachments>
+            </attachments>
+            <subtasks>
+            </subtasks>
+            <customfields>
+                <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
+                    <customfieldname>Epic Link</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>IN-97</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
+                    <customfieldname>Rank</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>0|hzzzxj:i</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
-                        <customfieldname>Sprint</customfieldname>
-                        <customfieldvalues>
-                                <customfieldvalue id="6">Sprint 6</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
+                    <customfieldname>Sprint</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue id="6">Sprint 6</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                        <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
-                        <customfieldname>Testing Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                                                                            <customfield id="customfield_10001" key="com.atlassian.jira.ext.charting:timeinstatus">
-                        <customfieldname>[CHART] Time in Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                    </customfields>
-    </item>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
+                    <customfieldname>Testing Status</customfieldname>
+                    <customfieldvalues>
 
-<item>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10001" key="com.atlassian.jira.ext.charting:timeinstatus">
+                    <customfieldname>[CHART] Time in Status</customfieldname>
+                    <customfieldvalues>
+
+                    </customfieldvalues>
+                </customfield>
+            </customfields>
+        </item>
+
+        <item>
             <title>[IN-386] add loader to chassisExpree to show studies</title>
-                <link>https://wwarninfo.atlassian.net/browse/IN-386</link>
-                <project id="10001" key="IN">informatics</project>
-                    <description></description>
-                <environment></environment>
-        <key id="11203">IN-386</key>
+            <link>https://wwarninfo.atlassian.net/browse/IN-386</link>
+            <project id="10001" key="IN">informatics</project>
+            <description></description>
+            <environment></environment>
+            <key id="11203">IN-386</key>
             <summary>add loader to chassisExpree to show studies</summary>
-                <type id="10002" iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">Task</type>
-                                            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium</priority>
-                        <status id="10001" iconUrl="https://wwarninfo.atlassian.net/" description="">Done</status>
-                    <statusCategory id="3" key="done" colorName="green"/>
-                                    <resolution id="10000">Done</resolution>
-                                        <assignee username="admin">Ignacio Suay [Administrator]</assignee>
-                                    <reporter username="admin">Ignacio Suay [Administrator]</reporter>
-                        <labels>
-                    </labels>
-                <created>Tue, 5 Jan 2016 10:24:17 +0000</created>
-                <updated>Fri, 8 Jan 2016 12:23:49 +0000</updated>
-                            <resolved>Fri, 8 Jan 2016 12:23:48 +0000</resolved>
-                                                                        <due></due>
-                            <votes>0</votes>
-                                    <watches>1</watches>
-                                    <timeoriginalestimate seconds="14400">4 hours</timeoriginalestimate>
-                            <timeestimate seconds="3600">1 hour</timeestimate>
-                            <timespent seconds="10800">3 hours</timespent>
-                                        <attachments>
-                    </attachments>
-                <subtasks>
-                    </subtasks>
-                <customfields>
-                                                                            <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
-                        <customfieldname>Epic Link</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>IN-97</customfieldvalue>
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                                                                                                                                                                                                                                                                                    <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
-                        <customfieldname>Rank</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>0|hzzzxm:i</customfieldvalue>
+            <type id="10002"
+                  iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">
+                Task
+            </type>
+            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium
+            </priority>
+            <status id="10001" iconUrl="https://wwarninfo.atlassian.net/" description="">Done</status>
+            <statusCategory id="3" key="done" colorName="green"/>
+            <resolution id="10000">Done</resolution>
+            <assignee username="admin">Ignacio Suay [Administrator]</assignee>
+            <reporter username="admin">Ignacio Suay [Administrator]</reporter>
+            <labels>
+            </labels>
+            <created>Tue, 5 Jan 2016 10:24:17 +0000</created>
+            <updated>Fri, 8 Jan 2016 12:23:49 +0000</updated>
+            <resolved>Fri, 8 Jan 2016 12:23:48 +0000</resolved>
+            <due></due>
+            <votes>0</votes>
+            <watches>1</watches>
+            <timeoriginalestimate seconds="14400">4 hours</timeoriginalestimate>
+            <timeestimate seconds="3600">1 hour</timeestimate>
+            <timespent seconds="10800">3 hours</timespent>
+            <attachments>
+            </attachments>
+            <subtasks>
+            </subtasks>
+            <customfields>
+                <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
+                    <customfieldname>Epic Link</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>IN-97</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
+                    <customfieldname>Rank</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>0|hzzzxm:i</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
-                        <customfieldname>Sprint</customfieldname>
-                        <customfieldvalues>
-                                <customfieldvalue id="6">Sprint 6</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
+                    <customfieldname>Sprint</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue id="6">Sprint 6</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                        <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
-                        <customfieldname>Testing Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                                                                            <customfield id="customfield_10001" key="com.atlassian.jira.ext.charting:timeinstatus">
-                        <customfieldname>[CHART] Time in Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                    </customfields>
-    </item>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
+                    <customfieldname>Testing Status</customfieldname>
+                    <customfieldvalues>
 
-<item>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10001" key="com.atlassian.jira.ext.charting:timeinstatus">
+                    <customfieldname>[CHART] Time in Status</customfieldname>
+                    <customfieldvalues>
+
+                    </customfieldvalues>
+                </customfield>
+            </customfields>
+        </item>
+
+        <item>
             <title>[IN-384] migrate chassisTmp to Chassis</title>
-                <link>https://wwarninfo.atlassian.net/browse/IN-384</link>
-                <project id="10001" key="IN">informatics</project>
-                    <description></description>
-                <environment></environment>
-        <key id="11201">IN-384</key>
+            <link>https://wwarninfo.atlassian.net/browse/IN-384</link>
+            <project id="10001" key="IN">informatics</project>
+            <description></description>
+            <environment></environment>
+            <key id="11201">IN-384</key>
             <summary>migrate chassisTmp to Chassis</summary>
-                <type id="10002" iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">Task</type>
-                                            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium</priority>
-                        <status id="10001" iconUrl="https://wwarninfo.atlassian.net/" description="">Done</status>
-                    <statusCategory id="3" key="done" colorName="green"/>
-                                    <resolution id="10000">Done</resolution>
-                                        <assignee username="admin">Ignacio Suay [Administrator]</assignee>
-                                    <reporter username="admin">Ignacio Suay [Administrator]</reporter>
-                        <labels>
-                    </labels>
-                <created>Mon, 4 Jan 2016 15:12:02 +0000</created>
-                <updated>Mon, 11 Jan 2016 16:34:09 +0000</updated>
-                            <resolved>Mon, 11 Jan 2016 16:34:09 +0000</resolved>
-                                                                        <due></due>
-                            <votes>0</votes>
-                                    <watches>1</watches>
-                                    <timeoriginalestimate seconds="28800">1 day</timeoriginalestimate>
-                            <timeestimate seconds="0">0 minutes</timeestimate>
-                            <timespent seconds="28800">1 day</timespent>
-                                        <attachments>
-                    </attachments>
-                <subtasks>
-                    </subtasks>
-                <customfields>
-                                                                            <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
-                        <customfieldname>Epic Link</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>IN-97</customfieldvalue>
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                                                                                                                                                                                                                                                                                    <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
-                        <customfieldname>Rank</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>0|hzzzxk:</customfieldvalue>
+            <type id="10002"
+                  iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">
+                Task
+            </type>
+            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium
+            </priority>
+            <status id="10001" iconUrl="https://wwarninfo.atlassian.net/" description="">Done</status>
+            <statusCategory id="3" key="done" colorName="green"/>
+            <resolution id="10000">Done</resolution>
+            <assignee username="admin">Ignacio Suay [Administrator]</assignee>
+            <reporter username="admin">Ignacio Suay [Administrator]</reporter>
+            <labels>
+            </labels>
+            <created>Mon, 4 Jan 2016 15:12:02 +0000</created>
+            <updated>Mon, 11 Jan 2016 16:34:09 +0000</updated>
+            <resolved>Mon, 11 Jan 2016 16:34:09 +0000</resolved>
+            <due></due>
+            <votes>0</votes>
+            <watches>1</watches>
+            <timeoriginalestimate seconds="28800">1 day</timeoriginalestimate>
+            <timeestimate seconds="0">0 minutes</timeestimate>
+            <timespent seconds="28800">1 day</timespent>
+            <attachments>
+            </attachments>
+            <subtasks>
+            </subtasks>
+            <customfields>
+                <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
+                    <customfieldname>Epic Link</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>IN-97</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
+                    <customfieldname>Rank</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>0|hzzzxk:</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
-                        <customfieldname>Sprint</customfieldname>
-                        <customfieldvalues>
-                                <customfieldvalue id="6">Sprint 6</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
+                    <customfieldname>Sprint</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue id="6">Sprint 6</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                        <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
-                        <customfieldname>Testing Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                                                                            <customfield id="customfield_10001" key="com.atlassian.jira.ext.charting:timeinstatus">
-                        <customfieldname>[CHART] Time in Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                    </customfields>
-    </item>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
+                    <customfieldname>Testing Status</customfieldname>
+                    <customfieldvalues>
 
-<item>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10001" key="com.atlassian.jira.ext.charting:timeinstatus">
+                    <customfieldname>[CHART] Time in Status</customfieldname>
+                    <customfieldvalues>
+
+                    </customfieldvalues>
+                </customfield>
+            </customfields>
+        </item>
+
+        <item>
             <title>[IN-383] Audit user actions in chassis 2</title>
-                <link>https://wwarninfo.atlassian.net/browse/IN-383</link>
-                <project id="10001" key="IN">informatics</project>
-                    <description></description>
-                <environment></environment>
-        <key id="11200">IN-383</key>
+            <link>https://wwarninfo.atlassian.net/browse/IN-383</link>
+            <project id="10001" key="IN">informatics</project>
+            <description></description>
+            <environment></environment>
+            <key id="11200">IN-383</key>
             <summary>Audit user actions in chassis 2</summary>
-                <type id="10002" iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">Task</type>
-                                            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium</priority>
-                        <status id="10001" iconUrl="https://wwarninfo.atlassian.net/" description="">Done</status>
-                    <statusCategory id="3" key="done" colorName="green"/>
-                                    <resolution id="10000">Done</resolution>
-                                        <assignee username="admin">Ignacio Suay [Administrator]</assignee>
-                                    <reporter username="admin">Ignacio Suay [Administrator]</reporter>
-                        <labels>
-                    </labels>
-                <created>Mon, 4 Jan 2016 15:09:24 +0000</created>
-                <updated>Wed, 6 Jan 2016 16:59:37 +0000</updated>
-                            <resolved>Wed, 6 Jan 2016 16:59:37 +0000</resolved>
-                                                                        <due></due>
-                            <votes>0</votes>
-                                    <watches>1</watches>
-                                    <timeoriginalestimate seconds="43200">1 day, 4 hours</timeoriginalestimate>
-                            <timeestimate seconds="21600">6 hours</timeestimate>
-                            <timespent seconds="21600">6 hours</timespent>
-                                        <attachments>
-                    </attachments>
-                <subtasks>
-                    </subtasks>
-                <customfields>
-                                                                            <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
-                        <customfieldname>Epic Link</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>IN-97</customfieldvalue>
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                                                                                                                                                                                                                                                                                    <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
-                        <customfieldname>Rank</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>0|hzzzxl:</customfieldvalue>
+            <type id="10002"
+                  iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">
+                Task
+            </type>
+            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium
+            </priority>
+            <status id="10001" iconUrl="https://wwarninfo.atlassian.net/" description="">Done</status>
+            <statusCategory id="3" key="done" colorName="green"/>
+            <resolution id="10000">Done</resolution>
+            <assignee username="admin">Ignacio Suay [Administrator]</assignee>
+            <reporter username="admin">Ignacio Suay [Administrator]</reporter>
+            <labels>
+            </labels>
+            <created>Mon, 4 Jan 2016 15:09:24 +0000</created>
+            <updated>Wed, 6 Jan 2016 16:59:37 +0000</updated>
+            <resolved>Wed, 6 Jan 2016 16:59:37 +0000</resolved>
+            <due></due>
+            <votes>0</votes>
+            <watches>1</watches>
+            <timeoriginalestimate seconds="43200">1 day, 4 hours</timeoriginalestimate>
+            <timeestimate seconds="21600">6 hours</timeestimate>
+            <timespent seconds="21600">6 hours</timespent>
+            <attachments>
+            </attachments>
+            <subtasks>
+            </subtasks>
+            <customfields>
+                <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
+                    <customfieldname>Epic Link</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>IN-97</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
+                    <customfieldname>Rank</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>0|hzzzxl:</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
-                        <customfieldname>Sprint</customfieldname>
-                        <customfieldvalues>
-                                <customfieldvalue id="6">Sprint 6</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
+                    <customfieldname>Sprint</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue id="6">Sprint 6</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                        <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
-                        <customfieldname>Testing Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                                                                            <customfield id="customfield_10001" key="com.atlassian.jira.ext.charting:timeinstatus">
-                        <customfieldname>[CHART] Time in Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                    </customfields>
-    </item>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
+                    <customfieldname>Testing Status</customfieldname>
+                    <customfieldvalues>
 
-<item>
-            <title>[IN-368] Migrate Chassis 2 data to Chassis Core Data + Malaria db and verify that everything is correct</title>
-                <link>https://wwarninfo.atlassian.net/browse/IN-368</link>
-                <project id="10001" key="IN">informatics</project>
-                    <description></description>
-                <environment></environment>
-        <key id="11016">IN-368</key>
-            <summary>Migrate Chassis 2 data to Chassis Core Data + Malaria db and verify that everything is correct</summary>
-                <type id="10002" iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">Task</type>
-                                            <priority id="1" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/highest.svg">Highest</priority>
-                        <status id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/statuses/inprogress.png" description="This issue is being actively worked on at the moment by the assignee.">In Progress</status>
-                    <statusCategory id="4" key="indeterminate" colorName="yellow"/>
-                                    <resolution id="-1">Unresolved</resolution>
-                                        <assignee username="admin">Ignacio Suay [Administrator]</assignee>
-                                    <reporter username="admin">Ignacio Suay [Administrator]</reporter>
-                        <labels>
-                    </labels>
-                <created>Mon, 7 Dec 2015 16:49:08 +0000</created>
-                <updated>Mon, 4 Jan 2016 15:32:30 +0000</updated>
-                                                                                <due></due>
-                            <votes>0</votes>
-                                    <watches>1</watches>
-                                    <timeoriginalestimate seconds="86400">3 days</timeoriginalestimate>
-                            <timeestimate seconds="28800">1 day</timeestimate>
-                                                <attachments>
-                    </attachments>
-                <subtasks>
-                    </subtasks>
-                <customfields>
-                                                                            <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
-                        <customfieldname>Epic Link</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>IN-97</customfieldvalue>
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                                                                                                                                                                                                                                                                                    <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
-                        <customfieldname>Rank</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>0|hzzzxj:</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10001" key="com.atlassian.jira.ext.charting:timeinstatus">
+                    <customfieldname>[CHART] Time in Status</customfieldname>
+                    <customfieldvalues>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
-                        <customfieldname>Sprint</customfieldname>
-                        <customfieldvalues>
-                                <customfieldvalue id="5">Sprint 5</customfieldvalue>
-    <customfieldvalue id="6">Sprint 6</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+            </customfields>
+        </item>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                        <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
-                        <customfieldname>Testing Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                                                                            </customfields>
-    </item>
+        <item>
+            <title>[IN-368] Migrate Chassis 2 data to Chassis Core Data + Malaria db and verify that everything is
+                correct
+            </title>
+            <link>https://wwarninfo.atlassian.net/browse/IN-368</link>
+            <project id="10001" key="IN">informatics</project>
+            <description></description>
+            <environment></environment>
+            <key id="11016">IN-368</key>
+            <summary>Migrate Chassis 2 data to Chassis Core Data + Malaria db and verify that everything is correct
+            </summary>
+            <type id="10002"
+                  iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">
+                Task
+            </type>
+            <priority id="1" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/highest.svg">Highest
+            </priority>
+            <status id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/statuses/inprogress.png"
+                    description="This issue is being actively worked on at the moment by the assignee.">In Progress
+            </status>
+            <statusCategory id="4" key="indeterminate" colorName="yellow"/>
+            <resolution id="-1">Unresolved</resolution>
+            <assignee username="admin">Ignacio Suay [Administrator]</assignee>
+            <reporter username="admin">Ignacio Suay [Administrator]</reporter>
+            <labels>
+            </labels>
+            <created>Mon, 7 Dec 2015 16:49:08 +0000</created>
+            <updated>Mon, 4 Jan 2016 15:32:30 +0000</updated>
+            <due></due>
+            <votes>0</votes>
+            <watches>1</watches>
+            <timeoriginalestimate seconds="86400">3 days</timeoriginalestimate>
+            <timeestimate seconds="28800">1 day</timeestimate>
+            <attachments>
+            </attachments>
+            <subtasks>
+            </subtasks>
+            <customfields>
+                <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
+                    <customfieldname>Epic Link</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>IN-97</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
+                    <customfieldname>Rank</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>0|hzzzxj:</customfieldvalue>
 
-<item>
-            <title>[IN-359] Provide a multi-disease platform for CE </title>
-                <link>https://wwarninfo.atlassian.net/browse/IN-359</link>
-                <project id="10001" key="IN">informatics</project>
-                    <description></description>
-                <environment></environment>
-        <key id="11007">IN-359</key>
-            <summary>Provide a multi-disease platform for CE </summary>
-                <type id="10002" iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">Task</type>
-                                            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium</priority>
-                        <status id="10001" iconUrl="https://wwarninfo.atlassian.net/" description="">Done</status>
-                    <statusCategory id="3" key="done" colorName="green"/>
-                                    <resolution id="10000">Done</resolution>
-                                        <assignee username="admin">Ignacio Suay [Administrator]</assignee>
-                                    <reporter username="admin">Ignacio Suay [Administrator]</reporter>
-                        <labels>
-                    </labels>
-                <created>Mon, 7 Dec 2015 10:33:35 +0000</created>
-                <updated>Fri, 8 Jan 2016 15:31:00 +0000</updated>
-                            <resolved>Fri, 8 Jan 2016 15:31:00 +0000</resolved>
-                                                                        <due></due>
-                            <votes>0</votes>
-                                    <watches>1</watches>
-                                    <timeoriginalestimate seconds="28800">1 day</timeoriginalestimate>
-                            <timeestimate seconds="0">0 minutes</timeestimate>
-                            <timespent seconds="28800">1 day</timespent>
-                                        <attachments>
-                    </attachments>
-                <subtasks>
-                    </subtasks>
-                <customfields>
-                                                                            <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
-                        <customfieldname>Epic Link</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>IN-175</customfieldvalue>
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                                                                                                                                                                                                                                                                                    <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
-                        <customfieldname>Rank</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>0|hzzzxm:</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
+                    <customfieldname>Sprint</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue id="5">Sprint 5</customfieldvalue>
+                        <customfieldvalue id="6">Sprint 6</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
-                        <customfieldname>Sprint</customfieldname>
-                        <customfieldvalues>
-                                <customfieldvalue id="5">Sprint 5</customfieldvalue>
-    <customfieldvalue id="6">Sprint 6</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
+                    <customfieldname>Testing Status</customfieldname>
+                    <customfieldvalues>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                        <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
-                        <customfieldname>Testing Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                                                                            <customfield id="customfield_10001" key="com.atlassian.jira.ext.charting:timeinstatus">
-                        <customfieldname>[CHART] Time in Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                    </customfields>
-    </item>
+                    </customfieldvalues>
+                </customfield>
+            </customfields>
+        </item>
 
-<item>
+        <item>
+            <title>[IN-359] Provide a multi-disease platform for CE</title>
+            <link>https://wwarninfo.atlassian.net/browse/IN-359</link>
+            <project id="10001" key="IN">informatics</project>
+            <description></description>
+            <environment></environment>
+            <key id="11007">IN-359</key>
+            <summary>Provide a multi-disease platform for CE</summary>
+            <type id="10002"
+                  iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">
+                Task
+            </type>
+            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium
+            </priority>
+            <status id="10001" iconUrl="https://wwarninfo.atlassian.net/" description="">Done</status>
+            <statusCategory id="3" key="done" colorName="green"/>
+            <resolution id="10000">Done</resolution>
+            <assignee username="admin">Ignacio Suay [Administrator]</assignee>
+            <reporter username="admin">Ignacio Suay [Administrator]</reporter>
+            <labels>
+            </labels>
+            <created>Mon, 7 Dec 2015 10:33:35 +0000</created>
+            <updated>Fri, 8 Jan 2016 15:31:00 +0000</updated>
+            <resolved>Fri, 8 Jan 2016 15:31:00 +0000</resolved>
+            <due></due>
+            <votes>0</votes>
+            <watches>1</watches>
+            <timeoriginalestimate seconds="28800">1 day</timeoriginalestimate>
+            <timeestimate seconds="0">0 minutes</timeestimate>
+            <timespent seconds="28800">1 day</timespent>
+            <attachments>
+            </attachments>
+            <subtasks>
+            </subtasks>
+            <customfields>
+                <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
+                    <customfieldname>Epic Link</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>IN-175</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
+                    <customfieldname>Rank</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>0|hzzzxm:</customfieldvalue>
+
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
+                    <customfieldname>Sprint</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue id="5">Sprint 5</customfieldvalue>
+                        <customfieldvalue id="6">Sprint 6</customfieldvalue>
+
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
+                    <customfieldname>Testing Status</customfieldname>
+                    <customfieldvalues>
+
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10001" key="com.atlassian.jira.ext.charting:timeinstatus">
+                    <customfieldname>[CHART] Time in Status</customfieldname>
+                    <customfieldvalues>
+
+                    </customfieldvalues>
+                </customfield>
+            </customfields>
+        </item>
+
+        <item>
             <title>[IN-358] create a basic data structure for ebola</title>
-                <link>https://wwarninfo.atlassian.net/browse/IN-358</link>
-                <project id="10001" key="IN">informatics</project>
-                    <description></description>
-                <environment></environment>
-        <key id="11006">IN-358</key>
+            <link>https://wwarninfo.atlassian.net/browse/IN-358</link>
+            <project id="10001" key="IN">informatics</project>
+            <description></description>
+            <environment></environment>
+            <key id="11006">IN-358</key>
             <summary>create a basic data structure for ebola</summary>
-                <type id="10002" iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">Task</type>
-                                            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium</priority>
-                        <status id="10001" iconUrl="https://wwarninfo.atlassian.net/" description="">Done</status>
-                    <statusCategory id="3" key="done" colorName="green"/>
-                                    <resolution id="10000">Done</resolution>
-                                        <assignee username="admin">Ignacio Suay [Administrator]</assignee>
-                                    <reporter username="admin">Ignacio Suay [Administrator]</reporter>
-                        <labels>
-                    </labels>
-                <created>Mon, 7 Dec 2015 10:32:24 +0000</created>
-                <updated>Mon, 11 Jan 2016 16:34:30 +0000</updated>
-                            <resolved>Mon, 11 Jan 2016 16:34:30 +0000</resolved>
-                                                                        <due></due>
-                            <votes>0</votes>
-                                    <watches>1</watches>
-                                    <timeoriginalestimate seconds="28800">1 day</timeoriginalestimate>
-                            <timeestimate seconds="3600">1 hour</timeestimate>
-                            <timespent seconds="25200">7 hours</timespent>
-                                        <attachments>
-                    </attachments>
-                <subtasks>
-                    </subtasks>
-                <customfields>
-                                                                            <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
-                        <customfieldname>Epic Link</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>IN-175</customfieldvalue>
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                                                                                                                                                                                                                                                                                    <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
-                        <customfieldname>Rank</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>0|hzzzxn:</customfieldvalue>
+            <type id="10002"
+                  iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">
+                Task
+            </type>
+            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium
+            </priority>
+            <status id="10001" iconUrl="https://wwarninfo.atlassian.net/" description="">Done</status>
+            <statusCategory id="3" key="done" colorName="green"/>
+            <resolution id="10000">Done</resolution>
+            <assignee username="admin">Ignacio Suay [Administrator]</assignee>
+            <reporter username="admin">Ignacio Suay [Administrator]</reporter>
+            <labels>
+            </labels>
+            <created>Mon, 7 Dec 2015 10:32:24 +0000</created>
+            <updated>Mon, 11 Jan 2016 16:34:30 +0000</updated>
+            <resolved>Mon, 11 Jan 2016 16:34:30 +0000</resolved>
+            <due></due>
+            <votes>0</votes>
+            <watches>1</watches>
+            <timeoriginalestimate seconds="28800">1 day</timeoriginalestimate>
+            <timeestimate seconds="3600">1 hour</timeestimate>
+            <timespent seconds="25200">7 hours</timespent>
+            <attachments>
+            </attachments>
+            <subtasks>
+            </subtasks>
+            <customfields>
+                <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
+                    <customfieldname>Epic Link</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>IN-175</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
+                    <customfieldname>Rank</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>0|hzzzxn:</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
-                        <customfieldname>Sprint</customfieldname>
-                        <customfieldvalues>
-                                <customfieldvalue id="5">Sprint 5</customfieldvalue>
-    <customfieldvalue id="6">Sprint 6</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
+                    <customfieldname>Sprint</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue id="5">Sprint 5</customfieldvalue>
+                        <customfieldvalue id="6">Sprint 6</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                        <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
-                        <customfieldname>Testing Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                                                                            <customfield id="customfield_10001" key="com.atlassian.jira.ext.charting:timeinstatus">
-                        <customfieldname>[CHART] Time in Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                    </customfields>
-    </item>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
+                    <customfieldname>Testing Status</customfieldname>
+                    <customfieldvalues>
 
-<item>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10001" key="com.atlassian.jira.ext.charting:timeinstatus">
+                    <customfieldname>[CHART] Time in Status</customfieldname>
+                    <customfieldvalues>
+
+                    </customfieldvalues>
+                </customfield>
+            </customfields>
+        </item>
+
+        <item>
             <title>[IN-349] Work with Richard to plan Explorer data builder moves to Chassis II</title>
-                <link>https://wwarninfo.atlassian.net/browse/IN-349</link>
-                <project id="10001" key="IN">informatics</project>
-                    <description></description>
-                <environment></environment>
-        <key id="10914">IN-349</key>
+            <link>https://wwarninfo.atlassian.net/browse/IN-349</link>
+            <project id="10001" key="IN">informatics</project>
+            <description></description>
+            <environment></environment>
+            <key id="10914">IN-349</key>
             <summary>Work with Richard to plan Explorer data builder moves to Chassis II</summary>
-                <type id="10001" iconUrl="https://wwarninfo.atlassian.net/images/icons/issuetypes/story.svg">Story</type>
-                                            <priority id="1" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/highest.svg">Highest</priority>
-                        <status id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/statuses/inprogress.png" description="This issue is being actively worked on at the moment by the assignee.">In Progress</status>
-                    <statusCategory id="4" key="indeterminate" colorName="yellow"/>
-                                    <resolution id="-1">Unresolved</resolution>
-                                        <assignee username="andrew.payne">Andrew Payne</assignee>
-                                    <reporter username="andrew.payne">Andrew Payne</reporter>
-                        <labels>
-                    </labels>
-                <created>Fri, 4 Dec 2015 11:07:10 +0000</created>
-                <updated>Tue, 5 Jan 2016 09:36:39 +0000</updated>
-                                                                                <due></due>
-                            <votes>0</votes>
-                                    <watches>1</watches>
-                                    <timeoriginalestimate seconds="86400">3 days</timeoriginalestimate>
-                            <timeestimate seconds="86400">3 days</timeestimate>
-                                                <attachments>
-                    </attachments>
-                <subtasks>
-                    </subtasks>
-                <customfields>
-                                                                                                        <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
-                        <customfieldname>Epic Link</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>IN-97</customfieldvalue>
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                                                                                                                                                                                                                                                                                    <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
-                        <customfieldname>Rank</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>0|hzzzxp:</customfieldvalue>
+            <type id="10001" iconUrl="https://wwarninfo.atlassian.net/images/icons/issuetypes/story.svg">Story</type>
+            <priority id="1" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/highest.svg">Highest
+            </priority>
+            <status id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/statuses/inprogress.png"
+                    description="This issue is being actively worked on at the moment by the assignee.">In Progress
+            </status>
+            <statusCategory id="4" key="indeterminate" colorName="yellow"/>
+            <resolution id="-1">Unresolved</resolution>
+            <assignee username="andrew.payne">Andrew Payne</assignee>
+            <reporter username="andrew.payne">Andrew Payne</reporter>
+            <labels>
+            </labels>
+            <created>Fri, 4 Dec 2015 11:07:10 +0000</created>
+            <updated>Tue, 5 Jan 2016 09:36:39 +0000</updated>
+            <due></due>
+            <votes>0</votes>
+            <watches>1</watches>
+            <timeoriginalestimate seconds="86400">3 days</timeoriginalestimate>
+            <timeestimate seconds="86400">3 days</timeestimate>
+            <attachments>
+            </attachments>
+            <subtasks>
+            </subtasks>
+            <customfields>
+                <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
+                    <customfieldname>Epic Link</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>IN-97</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
+                    <customfieldname>Rank</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>0|hzzzxp:</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
-                        <customfieldname>Sprint</customfieldname>
-                        <customfieldvalues>
-                                <customfieldvalue id="5">Sprint 5</customfieldvalue>
-    <customfieldvalue id="6">Sprint 6</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
+                    <customfieldname>Sprint</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue id="5">Sprint 5</customfieldvalue>
+                        <customfieldvalue id="6">Sprint 6</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                                                    <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
-                        <customfieldname>Testing Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                                                                            </customfields>
-    </item>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
+                    <customfieldname>Testing Status</customfieldname>
+                    <customfieldvalues>
 
-<item>
+                    </customfieldvalues>
+                </customfield>
+            </customfields>
+        </item>
+
+        <item>
             <title>[IN-348] Add additional variables for low dose primaquine study</title>
-                <link>https://wwarninfo.atlassian.net/browse/IN-348</link>
-                <project id="10001" key="IN">informatics</project>
-                    <description></description>
-                <environment></environment>
-        <key id="10913">IN-348</key>
+            <link>https://wwarninfo.atlassian.net/browse/IN-348</link>
+            <project id="10001" key="IN">informatics</project>
+            <description></description>
+            <environment></environment>
+            <key id="10913">IN-348</key>
             <summary>Add additional variables for low dose primaquine study</summary>
-                <type id="10001" iconUrl="https://wwarninfo.atlassian.net/images/icons/issuetypes/story.svg">Story</type>
-                                            <priority id="2" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/high.svg">High</priority>
-                        <status id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/statuses/inprogress.png" description="This issue is being actively worked on at the moment by the assignee.">In Progress</status>
-                    <statusCategory id="4" key="indeterminate" colorName="yellow"/>
-                                    <resolution id="-1">Unresolved</resolution>
-                                        <assignee username="andrew.payne">Andrew Payne</assignee>
-                                    <reporter username="andrew.payne">Andrew Payne</reporter>
-                        <labels>
-                    </labels>
-                <created>Fri, 4 Dec 2015 11:05:57 +0000</created>
-                <updated>Tue, 5 Jan 2016 09:36:18 +0000</updated>
-                                                                                <due></due>
-                            <votes>0</votes>
-                                    <watches>1</watches>
-                                    <timeoriginalestimate seconds="432000">3 weeks</timeoriginalestimate>
-                            <timeestimate seconds="432000">3 weeks</timeestimate>
-                                                <attachments>
-                    </attachments>
-                <subtasks>
-                    </subtasks>
-                <customfields>
-                                                                                                        <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
-                        <customfieldname>Epic Link</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>IN-123</customfieldvalue>
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                                                                                                                                                                                                                                                                                    <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
-                        <customfieldname>Rank</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>0|hzzzxp:i</customfieldvalue>
+            <type id="10001" iconUrl="https://wwarninfo.atlassian.net/images/icons/issuetypes/story.svg">Story</type>
+            <priority id="2" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/high.svg">High</priority>
+            <status id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/statuses/inprogress.png"
+                    description="This issue is being actively worked on at the moment by the assignee.">In Progress
+            </status>
+            <statusCategory id="4" key="indeterminate" colorName="yellow"/>
+            <resolution id="-1">Unresolved</resolution>
+            <assignee username="andrew.payne">Andrew Payne</assignee>
+            <reporter username="andrew.payne">Andrew Payne</reporter>
+            <labels>
+            </labels>
+            <created>Fri, 4 Dec 2015 11:05:57 +0000</created>
+            <updated>Tue, 5 Jan 2016 09:36:18 +0000</updated>
+            <due></due>
+            <votes>0</votes>
+            <watches>1</watches>
+            <timeoriginalestimate seconds="432000">3 weeks</timeoriginalestimate>
+            <timeestimate seconds="432000">3 weeks</timeestimate>
+            <attachments>
+            </attachments>
+            <subtasks>
+            </subtasks>
+            <customfields>
+                <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
+                    <customfieldname>Epic Link</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>IN-123</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
+                    <customfieldname>Rank</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>0|hzzzxp:i</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
-                        <customfieldname>Sprint</customfieldname>
-                        <customfieldvalues>
-                                <customfieldvalue id="5">Sprint 5</customfieldvalue>
-    <customfieldvalue id="6">Sprint 6</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
+                    <customfieldname>Sprint</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue id="5">Sprint 5</customfieldvalue>
+                        <customfieldvalue id="6">Sprint 6</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                                                    <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
-                        <customfieldname>Testing Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                                                                            </customfields>
-    </item>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
+                    <customfieldname>Testing Status</customfieldname>
+                    <customfieldvalues>
 
-<item>
+                    </customfieldvalues>
+                </customfield>
+            </customfields>
+        </item>
+
+        <item>
             <title>[IN-337] create ChassisExpress structure for ebola</title>
-                <link>https://wwarninfo.atlassian.net/browse/IN-337</link>
-                <project id="10001" key="IN">informatics</project>
-                    <description></description>
-                <environment></environment>
-        <key id="10902">IN-337</key>
+            <link>https://wwarninfo.atlassian.net/browse/IN-337</link>
+            <project id="10001" key="IN">informatics</project>
+            <description></description>
+            <environment></environment>
+            <key id="10902">IN-337</key>
             <summary>create ChassisExpress structure for ebola</summary>
-                <type id="10002" iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">Task</type>
-                                            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium</priority>
-                        <status id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/statuses/inprogress.png" description="This issue is being actively worked on at the moment by the assignee.">In Progress</status>
-                    <statusCategory id="4" key="indeterminate" colorName="yellow"/>
-                                    <resolution id="-1">Unresolved</resolution>
-                                        <assignee username="admin">Ignacio Suay [Administrator]</assignee>
-                                    <reporter username="admin">Ignacio Suay [Administrator]</reporter>
-                        <labels>
-                    </labels>
-                <created>Mon, 30 Nov 2015 13:52:16 +0000</created>
-                <updated>Fri, 8 Jan 2016 15:31:21 +0000</updated>
-                                                                                <due></due>
-                            <votes>0</votes>
-                                    <watches>1</watches>
-                                    <timeoriginalestimate seconds="57600">2 days</timeoriginalestimate>
-                            <timeestimate seconds="57600">2 days</timeestimate>
-                                                <attachments>
-                    </attachments>
-                <subtasks>
-                    </subtasks>
-                <customfields>
-                                                                            <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
-                        <customfieldname>Epic Link</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>IN-175</customfieldvalue>
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                                                                                                                                                                                                                                                                                    <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
-                        <customfieldname>Rank</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>0|hzzzxk:r</customfieldvalue>
+            <type id="10002"
+                  iconUrl="https://wwarninfo.atlassian.net/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype">
+                Task
+            </type>
+            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium
+            </priority>
+            <status id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/statuses/inprogress.png"
+                    description="This issue is being actively worked on at the moment by the assignee.">In Progress
+            </status>
+            <statusCategory id="4" key="indeterminate" colorName="yellow"/>
+            <resolution id="-1">Unresolved</resolution>
+            <assignee username="admin">Ignacio Suay [Administrator]</assignee>
+            <reporter username="admin">Ignacio Suay [Administrator]</reporter>
+            <labels>
+            </labels>
+            <created>Mon, 30 Nov 2015 13:52:16 +0000</created>
+            <updated>Fri, 8 Jan 2016 15:31:21 +0000</updated>
+            <due></due>
+            <votes>0</votes>
+            <watches>1</watches>
+            <timeoriginalestimate seconds="57600">2 days</timeoriginalestimate>
+            <timeestimate seconds="57600">2 days</timeestimate>
+            <attachments>
+            </attachments>
+            <subtasks>
+            </subtasks>
+            <customfields>
+                <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
+                    <customfieldname>Epic Link</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>IN-175</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
+                    <customfieldname>Rank</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>0|hzzzxk:r</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
-                        <customfieldname>Sprint</customfieldname>
-                        <customfieldvalues>
-                                <customfieldvalue id="6">Sprint 6</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
+                    <customfieldname>Sprint</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue id="6">Sprint 6</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                        <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
-                        <customfieldname>Testing Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                                                                            </customfields>
-    </item>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
+                    <customfieldname>Testing Status</customfieldname>
+                    <customfieldvalues>
 
-<item>
+                    </customfieldvalues>
+                </customfield>
+            </customfields>
+        </item>
+
+        <item>
             <title>[IN-303] Identify duplicate studies through database search</title>
-                <link>https://wwarninfo.atlassian.net/browse/IN-303</link>
-                <project id="10001" key="IN">informatics</project>
-                    <description></description>
-                <environment></environment>
-        <key id="10621">IN-303</key>
+            <link>https://wwarninfo.atlassian.net/browse/IN-303</link>
+            <project id="10001" key="IN">informatics</project>
+            <description></description>
+            <environment></environment>
+            <key id="10621">IN-303</key>
             <summary>Identify duplicate studies through database search</summary>
-                <type id="10001" iconUrl="https://wwarninfo.atlassian.net/images/icons/issuetypes/story.svg">Story</type>
-                                            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium</priority>
-                        <status id="10000" iconUrl="https://wwarninfo.atlassian.net/" description="">To Do</status>
-                    <statusCategory id="2" key="new" colorName="blue-gray"/>
-                                    <resolution id="-1">Unresolved</resolution>
-                                        <assignee username="andrew.payne">Andrew Payne</assignee>
-                                    <reporter username="andrew.payne">Andrew Payne</reporter>
-                        <labels>
-                    </labels>
-                <created>Fri, 6 Nov 2015 14:27:40 +0000</created>
-                <updated>Tue, 5 Jan 2016 09:35:08 +0000</updated>
-                                                                                <due></due>
-                            <votes>0</votes>
-                                    <watches>1</watches>
-                                                                        <attachments>
-                    </attachments>
-                <subtasks>
-                    </subtasks>
-                <customfields>
-                                                                                                        <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
-                        <customfieldname>Epic Link</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>IN-123</customfieldvalue>
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                                                                                                                                                                                                                                                                                    <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
-                        <customfieldname>Rank</customfieldname>
-                        <customfieldvalues>
-                            <customfieldvalue>0|hzzzxo:</customfieldvalue>
+            <type id="10001" iconUrl="https://wwarninfo.atlassian.net/images/icons/issuetypes/story.svg">Story</type>
+            <priority id="3" iconUrl="https://wwarninfo.atlassian.net/images/icons/priorities/medium.svg">Medium
+            </priority>
+            <status id="10000" iconUrl="https://wwarninfo.atlassian.net/" description="">To Do</status>
+            <statusCategory id="2" key="new" colorName="blue-gray"/>
+            <resolution id="-1">Unresolved</resolution>
+            <assignee username="andrew.payne">Andrew Payne</assignee>
+            <reporter username="andrew.payne">Andrew Payne</reporter>
+            <labels>
+            </labels>
+            <created>Fri, 6 Nov 2015 14:27:40 +0000</created>
+            <updated>Tue, 5 Jan 2016 09:35:08 +0000</updated>
+            <due></due>
+            <votes>0</votes>
+            <watches>1</watches>
+            <attachments>
+            </attachments>
+            <subtasks>
+            </subtasks>
+            <customfields>
+                <customfield id="customfield_10008" key="com.pyxis.greenhopper.jira:gh-epic-link">
+                    <customfieldname>Epic Link</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>IN-123</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10006" key="com.pyxis.greenhopper.jira:gh-lexo-rank">
+                    <customfieldname>Rank</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue>0|hzzzxo:</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
-                        <customfieldname>Sprint</customfieldname>
-                        <customfieldvalues>
-                                <customfieldvalue id="5">Sprint 5</customfieldvalue>
-    <customfieldvalue id="6">Sprint 6</customfieldvalue>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10007" key="com.pyxis.greenhopper.jira:gh-sprint">
+                    <customfieldname>Sprint</customfieldname>
+                    <customfieldvalues>
+                        <customfieldvalue id="5">Sprint 5</customfieldvalue>
+                        <customfieldvalue id="6">Sprint 6</customfieldvalue>
 
-                        </customfieldvalues>
-                    </customfield>
-                                                                                                                                                    <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
-                        <customfieldname>Testing Status</customfieldname>
-                        <customfieldvalues>
-                            
-                        </customfieldvalues>
-                    </customfield>
-                                                                                            </customfields>
-    </item>
-</channel>
+                    </customfieldvalues>
+                </customfield>
+                <customfield id="customfield_10023" key="com.atlassian.bonfire.plugin:bonfire-testing-status-cft">
+                    <customfieldname>Testing Status</customfieldname>
+                    <customfieldvalues>
+
+                    </customfieldvalues>
+                </customfield>
+            </customfields>
+        </item>
+    </channel>
 </rss>
