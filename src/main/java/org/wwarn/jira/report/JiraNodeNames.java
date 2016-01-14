@@ -12,7 +12,12 @@ public enum JiraNodeNames {
     PRIORITY("priority"),
     STATUS("status"),
     RESOLUTION("resolution"),
-    ASSIGNEE("assignee")
+    ASSIGNEE("assignee"),
+    REPORTER("reporter"),
+    CREATED("created"),
+    UPDATED("updated"),
+    TIME_ESTIMATE("timeestimate"),
+    CUSTOM_FIELDS("customfields")
     ;
 
 
