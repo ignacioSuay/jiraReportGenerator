@@ -4,6 +4,7 @@ package org.wwarn.jira.report;
  * Created by suay on 1/13/16.
  */
 public enum JiraNodeNames {
+    TITLE("title"),
     ITEM("item"),
     SUMMARY("summary"),
     PROJECT("project"),
@@ -21,8 +22,7 @@ public enum JiraNodeNames {
     CUSTOM_FIELD("customfield"),
     CUSTOM_FIELD_NAME("customfieldname"),
     CUSTOM_FIELD_VALUES("customfieldvalues"),
-    CUSTOM_FIELD_VALUE("customfieldvalue")
-    ;
+    CUSTOM_FIELD_VALUE("customfieldvalue");
 
 
     String name;
