@@ -17,7 +17,11 @@ public enum JiraNodeNames {
     CREATED("created"),
     UPDATED("updated"),
     TIME_ESTIMATE("timeestimate"),
-    CUSTOM_FIELDS("customfields")
+    CUSTOM_FIELDS("customfields"),
+    CUSTOM_FIELD("customfield"),
+    CUSTOM_FIELD_NAME("customfieldname"),
+    CUSTOM_FIELD_VALUES("customfieldvalues"),
+    CUSTOM_FIELD_VALUE("customfieldvalue")
     ;
 
 
