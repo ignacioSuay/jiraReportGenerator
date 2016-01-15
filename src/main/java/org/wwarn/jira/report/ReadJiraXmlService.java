@@ -28,12 +28,23 @@ public class ReadJiraXmlService {
         Document xmlDoc = parser.getDocument();
 
         final Element root= xmlDoc.getDocumentElement();
-        NodeList records = root.getElementsByTagName(ITEM);
+        NodeList items = root.getElementsByTagName(ITEM);
 
-        for (int i = 0; i < records.getLength(); i++){
-            Issue issueDTO = new Issue();
-            issues.add(issueDTO);
+        for (int i = 0; i < items.getLength(); i++){
+            Issue issue = new Issue();
+
+            Element item = (Element)items.item(i);
+            issue.setTitle(getNodeValue(item, JiraNodeNames.TITLE.name));
+
+            issues.add(issue);
         }
         return issues;
+    }
+
+    private static String getNodeValue(Element record, String tagName){
+        if(record.getElementsByTagName(tagName).getLength() >0)
+            return record.getElementsByTagName(tagName).item(0).getFirstChild().getNodeValue();
+
+        return "";
     }
 }
