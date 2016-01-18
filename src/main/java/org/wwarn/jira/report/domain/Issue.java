@@ -148,6 +148,14 @@ public class Issue {
         this.customFields = customFields;
     }
 
+    public String getCustomFieldValue(String field){
+        return customFields.stream()
+                .filter(cf -> field.equals(cf.getName()))
+                .map(CustomField::getValue)
+                .findFirst().orElse("not found");
+
+    }
+
     @Override
     public String toString() {
         return "IssueDTO{" +
