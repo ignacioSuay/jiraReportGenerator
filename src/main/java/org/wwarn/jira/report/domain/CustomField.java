@@ -1,14 +1,12 @@
 package org.wwarn.jira.report.domain;
 
-import java.util.List;
-
 /**
  * Created by suay on 1/15/16.
  */
 public class CustomField {
     String name;
 
-    List<String> values;
+    String value;
 
     public String getName() {
         return name;
@@ -18,19 +16,19 @@ public class CustomField {
         this.name = name;
     }
 
-    public List<String> getValues() {
-        return values;
+    public String getValue() {
+        return value;
     }
 
-    public void setValues(List<String> values) {
-        this.values = values;
+    public void setValue(String value) {
+        this.value = value;
     }
 
     @Override
     public String toString() {
         return "CustomField{" +
                 "name='" + name + '\'' +
-                ", values=" + values +
+                ", value=" + value +
                 '}';
     }
 }

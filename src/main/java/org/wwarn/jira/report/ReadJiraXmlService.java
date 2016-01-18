@@ -4,6 +4,7 @@ import com.sun.org.apache.xerces.internal.parsers.DOMParser;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+import org.wwarn.jira.report.domain.CustomField;
 import org.wwarn.jira.report.domain.Issue;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -61,7 +62,22 @@ public class ReadJiraXmlService {
             e.printStackTrace();
         }
 
+        issue.setCustomFields(getCustomFields(item));
+        String sprint = issue.getCustomFieldValue("sprint");
         return issue;
+    }
+
+    private static List<CustomField> getCustomFields(Element item){
+        NodeList customFieldsList = item.getElementsByTagName(JiraNodeNames.CUSTOM_FIELD.name);
+        List<CustomField> customFields = new ArrayList<>();
+        for (int i = 0; i < customFieldsList.getLength(); i++){
+            Element cf = (Element)customFieldsList.item(i);
+            CustomField customField = new CustomField();
+            customField.setName(getNodeValue(cf, JiraNodeNames.CUSTOM_FIELD_NAME.name));
+            customField.setValue(getNodeValue(cf, JiraNodeNames.CUSTOM_FIELD_VALUE.name));
+            customFields.add(customField);
+        }
+        return customFields;
     }
 
     private static String getNodeValue(Element record, String tagName){

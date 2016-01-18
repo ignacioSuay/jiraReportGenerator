@@ -21,7 +21,6 @@ public enum JiraNodeNames {
     CUSTOM_FIELDS("customfields"),
     CUSTOM_FIELD("customfield"),
     CUSTOM_FIELD_NAME("customfieldname"),
-    CUSTOM_FIELD_VALUES("customfieldvalues"),
     CUSTOM_FIELD_VALUE("customfieldvalue");
 
 
