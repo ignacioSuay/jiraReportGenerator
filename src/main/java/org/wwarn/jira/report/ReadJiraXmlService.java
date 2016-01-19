@@ -1,6 +1,7 @@
 package org.wwarn.jira.report;
 
 import com.sun.org.apache.xerces.internal.parsers.DOMParser;
+import org.apache.poi.xwpf.usermodel.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -10,6 +11,7 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -20,6 +22,37 @@ import java.util.List;
  * Created by suay on 1/13/16.
  */
 public class ReadJiraXmlService {
+
+
+    public static void createWordDocument(List<Issue> issues) throws IOException {
+        XWPFDocument doc = new XWPFDocument();
+
+        XWPFTable table = doc.createTable(3, 3);
+
+        table.getRow(1).getCell(1).setText("EXAMPLE OF TABLE");
+
+        // table cells have a list of paragraphs; there is an initial
+        // paragraph created when the cell is created. If you create a
+        // paragraph in the document to put in the cell, it will also
+        // appear in the document following the table, which is probably
+        // not the desired result.
+        XWPFParagraph p1 = table.getRow(0).getCell(0).getParagraphs().get(0);
+
+        XWPFRun r1 = p1.createRun();
+        r1.setBold(true);
+        r1.setText("The quick brown fox");
+        r1.setItalic(true);
+        r1.setFontFamily("Courier");
+        r1.setUnderline(UnderlinePatterns.DOT_DOT_DASH);
+        r1.setTextPosition(100);
+
+        table.getRow(2).getCell(2).setText("only text");
+
+        FileOutputStream out = new FileOutputStream("simple.docx");
+        doc.write(out);
+        out.close();
+
+    }
 
 
     public static List<Issue> jiraToIssueDTO(FileInputStream inputStream) throws IOException, SAXException {
@@ -63,7 +96,6 @@ public class ReadJiraXmlService {
         }
 
         issue.setCustomFields(getCustomFields(item));
-        String sprint = issue.getCustomFieldValue("sprint");
         return issue;
     }
 
