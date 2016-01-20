@@ -27,26 +27,44 @@ public class ReadJiraXmlService {
     public static void createWordDocument(List<Issue> issues) throws IOException {
         XWPFDocument doc = new XWPFDocument();
 
-        XWPFTable table = doc.createTable(3, 3);
+        XWPFTable table = doc.createTable(issues.size()+1, 3);
 
-        table.getRow(1).getCell(1).setText("EXAMPLE OF TABLE");
+        table.getRow(0).getCell(0).setText("Issue Title");
+        table.getRow(0).getCell(1).setText("Assignee");
+        table.getRow(0).getCell(2).setText("Estimate");
 
-        // table cells have a list of paragraphs; there is an initial
-        // paragraph created when the cell is created. If you create a
-        // paragraph in the document to put in the cell, it will also
-        // appear in the document following the table, which is probably
-        // not the desired result.
-        XWPFParagraph p1 = table.getRow(0).getCell(0).getParagraphs().get(0);
+        for (int i = 0; i < issues.size(); i++){
+            Issue issue = issues.get(i);
+            int row = i + 1;
+            XWPFParagraph p1 = table.getRow(row).getCell(0).getParagraphs().get(0);
+            XWPFRun r1 = p1.createRun();
+            r1.setBold(true);
+            r1.setText(issue.getTitle());
+//            table.getRow(row).getCell(0).setText(issue.getTitle());
+            table.getRow(row).getCell(1).setText(issue.getAssignee());
+            table.getRow(row).getCell(2).setText(issue.getTimeEstimate());
 
-        XWPFRun r1 = p1.createRun();
-        r1.setBold(true);
-        r1.setText("The quick brown fox");
-        r1.setItalic(true);
-        r1.setFontFamily("Courier");
-        r1.setUnderline(UnderlinePatterns.DOT_DOT_DASH);
-        r1.setTextPosition(100);
+        }
 
-        table.getRow(2).getCell(2).setText("only text");
+
+//        table.getRow(1).getCell(1).setText("EXAMPLE OF TABLE");
+//
+//        // table cells have a list of paragraphs; there is an initial
+//        // paragraph created when the cell is created. If you create a
+//        // paragraph in the document to put in the cell, it will also
+//        // appear in the document following the table, which is probably
+//        // not the desired result.
+//        XWPFParagraph p1 = table.getRow(0).getCell(0).getParagraphs().get(0);
+//
+//        XWPFRun r1 = p1.createRun();
+//        r1.setBold(true);
+//        r1.setText("The quick brown fox");
+//        r1.setItalic(true);
+//        r1.setFontFamily("Courier");
+//        r1.setUnderline(UnderlinePatterns.DOT_DOT_DASH);
+//        r1.setTextPosition(100);
+//
+//        table.getRow(2).getCell(2).setText("only text");
 
         FileOutputStream out = new FileOutputStream("simple.docx");
         doc.write(out);
