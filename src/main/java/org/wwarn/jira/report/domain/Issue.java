@@ -1,7 +1,10 @@
 package org.wwarn.jira.report.domain;
 
+import org.wwarn.jira.report.JiraNodeNames;
+
 import java.util.Date;
 import java.util.List;
+
 
 /**
  * Created by suay on 1/13/16.
@@ -146,6 +149,42 @@ public class Issue {
 
     public void setCustomFields(List<CustomField> customFields) {
         this.customFields = customFields;
+    }
+
+    public String getValueByNode(JiraNodeNames node){
+        String res = null;
+
+        switch (node){
+            case TITLE:
+                res = getTitle();break;
+            case SUMMARY:
+                res = getSummary();break;
+            case PROJECT:
+                res = getProject();break;
+            case LINK:
+                res = getLink();break;
+            case TYPE:
+                res = getType();break;
+            case PRIORITY:
+                res = getPriority();break;
+            case STATUS:
+                res = getStatus();break;
+            case RESOLUTION:
+                res = getResolution();break;
+            case ASSIGNEE:
+                res = getAssignee();break;
+            case REPORTER:
+                res = getReporter();break;
+            case CREATED:
+                res = getCreated().toString();break;
+            case UPDATED:
+                res = getUpdated().toString();break;
+            case TIME_ESTIMATE:
+                res = getSummary();break;
+            //TODO: add customfields like sprint
+        }
+
+        return res;
     }
 
     public String getCustomFieldValue(String field){
