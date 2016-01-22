@@ -5,6 +5,7 @@ import org.wwarn.jira.report.domain.Issue;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.Arrays;
 import java.util.List;
 
 import static junit.framework.TestCase.assertNotNull;
@@ -32,4 +33,15 @@ public class ReadJiraXmlServiceTest {
         List<Issue> issueList = ReadJiraXmlService.jiraToIssueDTO(f);
         ReadJiraXmlService.createWordDocument(issueList);
     }
+
+    @Test
+    public void testCreateTableByFields() throws Exception {
+        File file = new File("/home/suay/dev/jiraReportGenerator/src/test/resources/sprint6.xml");
+        FileInputStream f = new FileInputStream(file);
+        List<JiraNodeNames> fields = Arrays.asList(JiraNodeNames.TITLE);
+        List<Issue> issueList = ReadJiraXmlService.jiraToIssueDTO(f);
+        ReadJiraXmlService.createTableByFields(issueList, fields);
+    }
+
+
 }
