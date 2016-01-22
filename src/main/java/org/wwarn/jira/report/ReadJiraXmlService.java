@@ -72,6 +72,35 @@ public class ReadJiraXmlService {
 
     }
 
+    public static void createTableByFields(List<Issue> issues, List<JiraNodeNames> fields) throws IOException {
+        XWPFDocument doc = new XWPFDocument();
+
+        XWPFTable table = doc.createTable(issues.size()+1, fields.size());
+
+        for(int cols = 0; cols < fields.size(); cols++){
+            table.getRow(0).getCell(cols).setText(fields.get(cols).getName());
+        }
+
+
+        for (int i = 0; i < issues.size(); i++){
+            Issue issue = issues.get(i);
+            int row = i + 1;
+//            XWPFParagraph p1 = table.getRow(row).getCell(0).getParagraphs().get(0);
+//            XWPFRun r1 = p1.createRun();
+//            r1.setBold(true);
+//            r1.setText(issue.getTitle());
+
+            for(int cols = 0; cols < fields.size(); cols++){
+                table.getRow(row).getCell(cols).setText(issue.getValueByNode(fields.get(cols)));
+            }
+        }
+
+        FileOutputStream out = new FileOutputStream("simple.docx");
+        doc.write(out);
+        out.close();
+
+    }
+
 
     public static List<Issue> jiraToIssueDTO(FileInputStream inputStream) throws IOException, SAXException {
         List<Issue> issues = new ArrayList<Issue>();
