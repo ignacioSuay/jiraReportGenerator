@@ -45,7 +45,7 @@ public class ReadJiraXmlService {
             table.getRow(row).getCell(2).setText(issue.getTimeEstimate());
 
         }
-        
+
         FileOutputStream out = new FileOutputStream("simple.docx");
         doc.write(out);
         out.close();
@@ -56,6 +56,7 @@ public class ReadJiraXmlService {
         XWPFDocument doc = new XWPFDocument();
 
         XWPFTable table = doc.createTable(issues.size()+1, fields.size());
+        table.setStyleID("Light Shading");
 
         for(int cols = 0; cols < fields.size(); cols++){
             XWPFParagraph p1 = table.getRow(0).getCell(cols).getParagraphs().get(0);
@@ -63,6 +64,8 @@ public class ReadJiraXmlService {
             r1.setBold(true);
             r1.setText(fields.get(cols).getName().toUpperCase());
             r1.setItalic(true);
+//            r1.setColor("90C3D4");
+
         }
 
 
