@@ -2,6 +2,9 @@ package org.wwarn.jira.report;
 
 import com.sun.org.apache.xerces.internal.parsers.DOMParser;
 import org.apache.poi.xwpf.usermodel.*;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+import org.springframework.stereotype.Component;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -13,6 +16,7 @@ import org.xml.sax.SAXException;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -21,10 +25,11 @@ import java.util.List;
 /**
  * Created by suay on 1/13/16.
  */
+@Component
 public class ReadJiraXmlService {
 
 
-    public static void createWordDocument(List<Issue> issues) throws IOException {
+    public void createWordDocument(List<Issue> issues) throws IOException {
         XWPFDocument doc = new XWPFDocument();
 
         XWPFTable table = doc.createTable(issues.size()+1, 3);
@@ -52,11 +57,12 @@ public class ReadJiraXmlService {
 
     }
 
-    public static void createTableByFields(List<Issue> issues, List<JiraNodeNames> fields) throws IOException {
-        XWPFDocument doc = new XWPFDocument();
+    public void createTableByFields(List<Issue> issues, List<JiraNodeNames> fields) throws IOException {
+        Resource resource = new ClassPathResource("template.docx");
+        XWPFDocument doc = new XWPFDocument(resource.getInputStream());
 
         XWPFTable table = doc.createTable(issues.size()+1, fields.size());
-        table.setStyleID("Light Shading");
+        table.setStyleID("LightShading");
 
         for(int cols = 0; cols < fields.size(); cols++){
             XWPFParagraph p1 = table.getRow(0).getCell(cols).getParagraphs().get(0);
@@ -84,7 +90,7 @@ public class ReadJiraXmlService {
     }
 
 
-    public static List<Issue> jiraToIssueDTO(FileInputStream inputStream) throws IOException, SAXException {
+    public List<Issue> jiraToIssueDTO(FileInputStream inputStream) throws IOException, SAXException {
         List<Issue> issues = new ArrayList<Issue>();
         InputSource inputSource = new InputSource(inputStream);
         DOMParser parser = new DOMParser();
@@ -102,7 +108,7 @@ public class ReadJiraXmlService {
     }
 
 
-    private static Issue XmlElementToIssue(Element item){
+    private Issue XmlElementToIssue(Element item){
         Issue issue = new Issue();
         issue.setTitle(getNodeValue(item, JiraNodeNames.TITLE.name).trim());
         issue.setLink(getNodeValue(item, JiraNodeNames.LINK.name).trim());
@@ -128,7 +134,7 @@ public class ReadJiraXmlService {
         return issue;
     }
 
-    private static List<CustomField> getCustomFields(Element item){
+    private List<CustomField> getCustomFields(Element item){
         NodeList customFieldsList = item.getElementsByTagName(JiraNodeNames.CUSTOM_FIELD.name);
         List<CustomField> customFields = new ArrayList<>();
         for (int i = 0; i < customFieldsList.getLength(); i++){
@@ -141,7 +147,7 @@ public class ReadJiraXmlService {
         return customFields;
     }
 
-    private static String getNodeValue(Element record, String tagName){
+    private String getNodeValue(Element record, String tagName){
         if(record.getElementsByTagName(tagName).getLength() >0)
             return record.getElementsByTagName(tagName).item(0).getFirstChild().getNodeValue();
 
