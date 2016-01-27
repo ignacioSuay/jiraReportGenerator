@@ -62,7 +62,7 @@ public class ReadJiraXmlService {
         XWPFDocument doc = new XWPFDocument(resource.getInputStream());
 
         XWPFTable table = doc.createTable(issues.size()+1, fields.size());
-        table.setStyleID("LightShading");
+        table.setStyleID("LightShading-Accent1");
 
         for(int cols = 0; cols < fields.size(); cols++){
             XWPFParagraph p1 = table.getRow(0).getCell(cols).getParagraphs().get(0);
