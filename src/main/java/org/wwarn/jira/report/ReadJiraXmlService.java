@@ -114,6 +114,7 @@ public class ReadJiraXmlService {
         issue.setLink(getNodeValue(item, JiraNodeNames.LINK.name).trim());
         issue.setProject(getNodeValue(item, JiraNodeNames.PROJECT.name).trim());
         issue.setSummary(getNodeValue(item, JiraNodeNames.SUMMARY.name).trim());
+        issue.setKey(getNodeValue(item, JiraNodeNames.KEY.name).trim());
         issue.setType(getNodeValue(item, JiraNodeNames.TYPE.name).trim());
         issue.setPriority(getNodeValue(item, JiraNodeNames.PRIORITY.name).trim());
         issue.setStatus(getNodeValue(item, JiraNodeNames.STATUS.name).trim());
