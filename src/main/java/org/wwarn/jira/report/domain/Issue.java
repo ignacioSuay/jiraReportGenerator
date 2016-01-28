@@ -19,6 +19,8 @@ public class Issue {
 
     String link;
 
+    String key;
+
     String type;
 
     String priority;
@@ -143,6 +145,14 @@ public class Issue {
         this.timeEstimate = timeEstimate;
     }
 
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
     public List<CustomField> getCustomFields() {
         return customFields;
     }
@@ -181,7 +191,11 @@ public class Issue {
                 res = getUpdated().toString();break;
             case TIME_ESTIMATE:
                 res = getSummary();break;
-            //TODO: add customfields like sprint
+            case SPRINT:
+                res = getCustomFieldValue(JiraNodeNames.SPRINT.getName());break;
+            case EPIC_LINK:
+                res = getCustomFieldValue(JiraNodeNames.EPIC_LINK.getName());break;
+
         }
 
         return res;

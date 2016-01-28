@@ -47,7 +47,7 @@ public class ReadJiraXmlServiceTest {
     public void testCreateTableByFields() throws Exception {
         File file = new File("/home/suay/dev/jiraReportGenerator/src/test/resources/sprint6.xml");
         FileInputStream f = new FileInputStream(file);
-        List<JiraNodeNames> fields = Arrays.asList(JiraNodeNames.TITLE, JiraNodeNames.ASSIGNEE, JiraNodeNames.CREATED);
+        List<JiraNodeNames> fields = Arrays.asList(JiraNodeNames.TITLE, JiraNodeNames.ASSIGNEE, JiraNodeNames.CREATED, JiraNodeNames.SPRINT, JiraNodeNames.EPIC_LINK);
         List<Issue> issueList = readJiraXmlService.jiraToIssueDTO(f);
         readJiraXmlService.createTableByFields(issueList, fields);
     }
