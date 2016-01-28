@@ -9,6 +9,7 @@ public enum JiraNodeNames {
     SUMMARY("summary"),
     PROJECT("project"),
     LINK("link"),
+    KEY("key"),
     TYPE("type"),
     PRIORITY("priority"),
     STATUS("status"),
@@ -21,7 +22,9 @@ public enum JiraNodeNames {
     CUSTOM_FIELDS("customfields"),
     CUSTOM_FIELD("customfield"),
     CUSTOM_FIELD_NAME("customfieldname"),
-    CUSTOM_FIELD_VALUE("customfieldvalue");
+    CUSTOM_FIELD_VALUE("customfieldvalue"),
+    SPRINT("Sprint"),
+    EPIC_LINK("Epic Link");
 
 
     String name;
