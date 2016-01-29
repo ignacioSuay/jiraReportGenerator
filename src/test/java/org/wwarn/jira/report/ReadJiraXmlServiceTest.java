@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 import static junit.framework.TestCase.assertNotNull;
 
@@ -53,4 +54,13 @@ public class ReadJiraXmlServiceTest {
     }
 
 
+    @Test
+    public void testGroupIssuesBy() throws Exception {
+        File file = new File("/home/suay/dev/jiraReportGenerator/src/test/resources/sprint7.xml");
+        FileInputStream f = new FileInputStream(file);
+        List<JiraNodeNames> fields = Arrays.asList(JiraNodeNames.TITLE, JiraNodeNames.ASSIGNEE, JiraNodeNames.CREATED, JiraNodeNames.SPRINT, JiraNodeNames.EPIC_LINK);
+        List<Issue> issueList = readJiraXmlService.jiraToIssueDTO(f);
+        Map<String, List<Issue>> stringListMap = readJiraXmlService.groupIssuesBy(issueList, JiraNodeNames.ASSIGNEE);
+        assert stringListMap != null;
+    }
 }

@@ -21,6 +21,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * Created by suay on 1/13/16.
@@ -153,5 +155,9 @@ public class ReadJiraXmlService {
             return record.getElementsByTagName(tagName).item(0).getFirstChild().getNodeValue();
 
         return "";
+    }
+
+    public Map<String, List<Issue>> groupIssuesBy(List<Issue>issues, JiraNodeNames jiraNodeName){
+        return issues.stream().collect(Collectors.groupingBy(i-> i.getValueByNode(jiraNodeName)));
     }
 }
