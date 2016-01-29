@@ -16,7 +16,6 @@ import org.xml.sax.SAXException;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -59,7 +58,7 @@ public class ReadJiraXmlService {
 
     }
 
-    public void createTableByFields(List<Issue> issues, List<JiraNodeNames> fields) throws IOException {
+    public void createTableByFields(List<Issue> issues, List<JiraNode> fields) throws IOException {
         Resource resource = new ClassPathResource("template.docx");
         XWPFDocument doc = new XWPFDocument(resource.getInputStream());
 
@@ -100,7 +99,7 @@ public class ReadJiraXmlService {
         Document xmlDoc = parser.getDocument();
 
         final Element root= xmlDoc.getDocumentElement();
-        NodeList items = root.getElementsByTagName(JiraNodeNames.ITEM.getName());
+        NodeList items = root.getElementsByTagName(JiraNode.ITEM.getName());
 
         for (int i = 0; i < items.getLength(); i++){
             Element item = (Element)items.item(i);
@@ -112,23 +111,23 @@ public class ReadJiraXmlService {
 
     private Issue XmlElementToIssue(Element item){
         Issue issue = new Issue();
-        issue.setTitle(getNodeValue(item, JiraNodeNames.TITLE.name).trim());
-        issue.setLink(getNodeValue(item, JiraNodeNames.LINK.name).trim());
-        issue.setProject(getNodeValue(item, JiraNodeNames.PROJECT.name).trim());
-        issue.setSummary(getNodeValue(item, JiraNodeNames.SUMMARY.name).trim());
-        issue.setKey(getNodeValue(item, JiraNodeNames.KEY.name).trim());
-        issue.setType(getNodeValue(item, JiraNodeNames.TYPE.name).trim());
-        issue.setPriority(getNodeValue(item, JiraNodeNames.PRIORITY.name).trim());
-        issue.setStatus(getNodeValue(item, JiraNodeNames.STATUS.name).trim());
-        issue.setResolution(getNodeValue(item, JiraNodeNames.RESOLUTION.name).trim());
-        issue.setAssignee(getNodeValue(item, JiraNodeNames.ASSIGNEE.name).trim());
-        issue.setReporter(getNodeValue(item, JiraNodeNames.REPORTER.name).trim());
-        issue.setTimeEstimate(getNodeValue(item, JiraNodeNames.TIME_ESTIMATE.name).trim());
+        issue.setTitle(getNodeValue(item, JiraNode.TITLE.name).trim());
+        issue.setLink(getNodeValue(item, JiraNode.LINK.name).trim());
+        issue.setProject(getNodeValue(item, JiraNode.PROJECT.name).trim());
+        issue.setSummary(getNodeValue(item, JiraNode.SUMMARY.name).trim());
+        issue.setKey(getNodeValue(item, JiraNode.KEY.name).trim());
+        issue.setType(getNodeValue(item, JiraNode.TYPE.name).trim());
+        issue.setPriority(getNodeValue(item, JiraNode.PRIORITY.name).trim());
+        issue.setStatus(getNodeValue(item, JiraNode.STATUS.name).trim());
+        issue.setResolution(getNodeValue(item, JiraNode.RESOLUTION.name).trim());
+        issue.setAssignee(getNodeValue(item, JiraNode.ASSIGNEE.name).trim());
+        issue.setReporter(getNodeValue(item, JiraNode.REPORTER.name).trim());
+        issue.setTimeEstimate(getNodeValue(item, JiraNode.TIME_ESTIMATE.name).trim());
 
         try {
             SimpleDateFormat formatter = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss ");
-            issue.setCreated(formatter.parse(getNodeValue(item, JiraNodeNames.CREATED.name)));
-            issue.setUpdated(formatter.parse(getNodeValue(item, JiraNodeNames.UPDATED.name)));
+            issue.setCreated(formatter.parse(getNodeValue(item, JiraNode.CREATED.name)));
+            issue.setUpdated(formatter.parse(getNodeValue(item, JiraNode.UPDATED.name)));
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -138,13 +137,13 @@ public class ReadJiraXmlService {
     }
 
     private List<CustomField> getCustomFields(Element item){
-        NodeList customFieldsList = item.getElementsByTagName(JiraNodeNames.CUSTOM_FIELD.name);
+        NodeList customFieldsList = item.getElementsByTagName(JiraNode.CUSTOM_FIELD.name);
         List<CustomField> customFields = new ArrayList<>();
         for (int i = 0; i < customFieldsList.getLength(); i++){
             Element cf = (Element)customFieldsList.item(i);
             CustomField customField = new CustomField();
-            customField.setName(getNodeValue(cf, JiraNodeNames.CUSTOM_FIELD_NAME.name));
-            customField.setValue(getNodeValue(cf, JiraNodeNames.CUSTOM_FIELD_VALUE.name));
+            customField.setName(getNodeValue(cf, JiraNode.CUSTOM_FIELD_NAME.name));
+            customField.setValue(getNodeValue(cf, JiraNode.CUSTOM_FIELD_VALUE.name));
             customFields.add(customField);
         }
         return customFields;
@@ -157,7 +156,7 @@ public class ReadJiraXmlService {
         return "";
     }
 
-    public Map<String, List<Issue>> groupIssuesBy(List<Issue>issues, JiraNodeNames jiraNodeName){
+    public Map<String, List<Issue>> groupIssuesBy(List<Issue>issues, JiraNode jiraNodeName){
         return issues.stream().collect(Collectors.groupingBy(i-> i.getValueByNode(jiraNodeName)));
     }
 }

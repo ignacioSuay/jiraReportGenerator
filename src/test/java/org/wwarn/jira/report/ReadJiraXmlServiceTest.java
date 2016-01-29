@@ -48,7 +48,7 @@ public class ReadJiraXmlServiceTest {
     public void testCreateTableByFields() throws Exception {
         File file = new File("/home/suay/dev/jiraReportGenerator/src/test/resources/sprint6.xml");
         FileInputStream f = new FileInputStream(file);
-        List<JiraNodeNames> fields = Arrays.asList(JiraNodeNames.TITLE, JiraNodeNames.ASSIGNEE, JiraNodeNames.CREATED, JiraNodeNames.SPRINT, JiraNodeNames.EPIC_LINK);
+        List<JiraNode> fields = Arrays.asList(JiraNode.TITLE, JiraNode.ASSIGNEE, JiraNode.CREATED, JiraNode.SPRINT, JiraNode.EPIC_LINK);
         List<Issue> issueList = readJiraXmlService.jiraToIssueDTO(f);
         readJiraXmlService.createTableByFields(issueList, fields);
     }
@@ -58,9 +58,9 @@ public class ReadJiraXmlServiceTest {
     public void testGroupIssuesBy() throws Exception {
         File file = new File("/home/suay/dev/jiraReportGenerator/src/test/resources/sprint7.xml");
         FileInputStream f = new FileInputStream(file);
-        List<JiraNodeNames> fields = Arrays.asList(JiraNodeNames.TITLE, JiraNodeNames.ASSIGNEE, JiraNodeNames.CREATED, JiraNodeNames.SPRINT, JiraNodeNames.EPIC_LINK);
+        List<JiraNode> fields = Arrays.asList(JiraNode.TITLE, JiraNode.ASSIGNEE, JiraNode.CREATED, JiraNode.SPRINT, JiraNode.EPIC_LINK);
         List<Issue> issueList = readJiraXmlService.jiraToIssueDTO(f);
-        Map<String, List<Issue>> stringListMap = readJiraXmlService.groupIssuesBy(issueList, JiraNodeNames.ASSIGNEE);
+        Map<String, List<Issue>> stringListMap = readJiraXmlService.groupIssuesBy(issueList, JiraNode.ASSIGNEE);
         assert stringListMap != null;
     }
 }

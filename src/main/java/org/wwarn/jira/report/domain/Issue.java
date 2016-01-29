@@ -1,6 +1,6 @@
 package org.wwarn.jira.report.domain;
 
-import org.wwarn.jira.report.JiraNodeNames;
+import org.wwarn.jira.report.JiraNode;
 
 import java.util.Date;
 import java.util.List;
@@ -161,7 +161,7 @@ public class Issue {
         this.customFields = customFields;
     }
 
-    public String getValueByNode(JiraNodeNames node){
+    public String getValueByNode(JiraNode node){
         String res = null;
 
         switch (node){
@@ -192,9 +192,9 @@ public class Issue {
             case TIME_ESTIMATE:
                 res = getSummary();break;
             case SPRINT:
-                res = getCustomFieldValue(JiraNodeNames.SPRINT.getName());break;
+                res = getCustomFieldValue(JiraNode.SPRINT.getName());break;
             case EPIC_LINK:
-                res = getCustomFieldValue(JiraNodeNames.EPIC_LINK.getName());break;
+                res = getCustomFieldValue(JiraNode.EPIC_LINK.getName());break;
 
         }
 

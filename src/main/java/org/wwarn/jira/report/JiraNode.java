@@ -3,7 +3,7 @@ package org.wwarn.jira.report;
 /**
  * Created by suay on 1/13/16.
  */
-public enum JiraNodeNames {
+public enum JiraNode {
     TITLE("title"),
     ITEM("item"),
     SUMMARY("summary"),
@@ -29,7 +29,7 @@ public enum JiraNodeNames {
 
     String name;
 
-    JiraNodeNames(String name) {
+    JiraNode(String name) {
         this.name = name;
     }
 
