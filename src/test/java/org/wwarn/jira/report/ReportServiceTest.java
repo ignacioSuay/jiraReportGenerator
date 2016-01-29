@@ -9,6 +9,7 @@ import org.wwarn.jira.report.domain.Issue;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -38,29 +39,29 @@ public class ReportServiceTest {
 
     @Test
     public void testCreateWordDocument() throws Exception {
-        File file = new File("/home/suay/dev/jiraReportGenerator/src/test/resources/sprint6.xml");
-        FileInputStream f = new FileInputStream(file);
-        List<Issue> issueList = reportService.jiraToIssueDTO(f);
+        List<Issue> issueList = getListIssues();
         reportService.createWordDocument(issueList);
     }
 
     @Test
     public void testCreateTableByFields() throws Exception {
-        File file = new File("/home/suay/dev/jiraReportGenerator/src/test/resources/sprint6.xml");
-        FileInputStream f = new FileInputStream(file);
+        List<Issue> issueList = getListIssues();
         List<JiraNode> fields = Arrays.asList(JiraNode.TITLE, JiraNode.ASSIGNEE, JiraNode.CREATED, JiraNode.SPRINT, JiraNode.EPIC_LINK);
-        List<Issue> issueList = reportService.jiraToIssueDTO(f);
         reportService.createTableByFields(issueList, fields);
     }
 
-
     @Test
     public void testGroupIssuesBy() throws Exception {
+        List<Issue> issueList = getListIssues();
+        Map<String, List<Issue>> stringListMap = reportService.groupIssuesBy(issueList, JiraNode.ASSIGNEE);
+        assert stringListMap != null;
+    }
+
+    private List<Issue> getListIssues() throws Exception {
         File file = new File("/home/suay/dev/jiraReportGenerator/src/test/resources/sprint7.xml");
         FileInputStream f = new FileInputStream(file);
         List<JiraNode> fields = Arrays.asList(JiraNode.TITLE, JiraNode.ASSIGNEE, JiraNode.CREATED, JiraNode.SPRINT, JiraNode.EPIC_LINK);
         List<Issue> issueList = reportService.jiraToIssueDTO(f);
-        Map<String, List<Issue>> stringListMap = reportService.groupIssuesBy(issueList, JiraNode.ASSIGNEE);
-        assert stringListMap != null;
+        return issueList;
     }
 }
