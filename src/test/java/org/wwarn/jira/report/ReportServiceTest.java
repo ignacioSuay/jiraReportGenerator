@@ -21,17 +21,17 @@ import static junit.framework.TestCase.assertNotNull;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("/applicationContext.xml")
-public class ReadJiraXmlServiceTest {
+public class ReportServiceTest {
 
 
     @Autowired
-    ReadJiraXmlService readJiraXmlService;
+    ReportService reportService;
 
     @Test
     public void testJiraToIssueDTO() throws Exception{
         File file = new File("/home/suay/dev/jiraReportGenerator/src/test/resources/sprint6.xml");
         FileInputStream f = new FileInputStream(file);
-        List<Issue> issueList = readJiraXmlService.jiraToIssueDTO(f);
+        List<Issue> issueList = reportService.jiraToIssueDTO(f);
         assertNotNull(issueList);
 
     }
@@ -40,8 +40,8 @@ public class ReadJiraXmlServiceTest {
     public void testCreateWordDocument() throws Exception {
         File file = new File("/home/suay/dev/jiraReportGenerator/src/test/resources/sprint6.xml");
         FileInputStream f = new FileInputStream(file);
-        List<Issue> issueList = readJiraXmlService.jiraToIssueDTO(f);
-        readJiraXmlService.createWordDocument(issueList);
+        List<Issue> issueList = reportService.jiraToIssueDTO(f);
+        reportService.createWordDocument(issueList);
     }
 
     @Test
@@ -49,8 +49,8 @@ public class ReadJiraXmlServiceTest {
         File file = new File("/home/suay/dev/jiraReportGenerator/src/test/resources/sprint6.xml");
         FileInputStream f = new FileInputStream(file);
         List<JiraNode> fields = Arrays.asList(JiraNode.TITLE, JiraNode.ASSIGNEE, JiraNode.CREATED, JiraNode.SPRINT, JiraNode.EPIC_LINK);
-        List<Issue> issueList = readJiraXmlService.jiraToIssueDTO(f);
-        readJiraXmlService.createTableByFields(issueList, fields);
+        List<Issue> issueList = reportService.jiraToIssueDTO(f);
+        reportService.createTableByFields(issueList, fields);
     }
 
 
@@ -59,8 +59,8 @@ public class ReadJiraXmlServiceTest {
         File file = new File("/home/suay/dev/jiraReportGenerator/src/test/resources/sprint7.xml");
         FileInputStream f = new FileInputStream(file);
         List<JiraNode> fields = Arrays.asList(JiraNode.TITLE, JiraNode.ASSIGNEE, JiraNode.CREATED, JiraNode.SPRINT, JiraNode.EPIC_LINK);
-        List<Issue> issueList = readJiraXmlService.jiraToIssueDTO(f);
-        Map<String, List<Issue>> stringListMap = readJiraXmlService.groupIssuesBy(issueList, JiraNode.ASSIGNEE);
+        List<Issue> issueList = reportService.jiraToIssueDTO(f);
+        Map<String, List<Issue>> stringListMap = reportService.groupIssuesBy(issueList, JiraNode.ASSIGNEE);
         assert stringListMap != null;
     }
 }

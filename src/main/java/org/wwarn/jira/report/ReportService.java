@@ -27,7 +27,7 @@ import java.util.stream.Collectors;
  * Created by suay on 1/13/16.
  */
 @Component
-public class ReadJiraXmlService {
+public class ReportService {
 
 
     public void createWordDocument(List<Issue> issues) throws IOException {
