@@ -19,6 +19,7 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -31,26 +32,15 @@ public class ReportService {
 
 
     public void createWordDocument(List<Issue> issues) throws IOException {
-        XWPFDocument doc = new XWPFDocument();
+        Resource resource = new ClassPathResource("template.docx");
+        XWPFDocument doc = new XWPFDocument(resource.getInputStream());
 
-        XWPFTable table = doc.createTable(issues.size()+1, 3);
+        XWPFParagraph p2 = doc.createParagraph();
+        XWPFRun r2 = p2.createRun();
+        r2.setText("from: ");
 
-        table.getRow(0).getCell(0).setText("Issue Title");
-        table.getRow(0).getCell(1).setText("Assignee");
-        table.getRow(0).getCell(2).setText("Estimate");
-
-        for (int i = 0; i < issues.size(); i++){
-            Issue issue = issues.get(i);
-            int row = i + 1;
-            XWPFParagraph p1 = table.getRow(row).getCell(0).getParagraphs().get(0);
-            XWPFRun r1 = p1.createRun();
-            r1.setBold(true);
-            r1.setText(issue.getTitle());
-//            table.getRow(row).getCell(0).setText(issue.getTitle());
-            table.getRow(row).getCell(1).setText(issue.getAssignee());
-            table.getRow(row).getCell(2).setText(issue.getTimeEstimate());
-
-        }
+        List<JiraNode> fields = Arrays.asList(JiraNode.TITLE, JiraNode.ASSIGNEE, JiraNode.CREATED, JiraNode.SPRINT, JiraNode.EPIC_LINK);
+        createTableByFields(issues, fields, doc);
 
         FileOutputStream out = new FileOutputStream("simple.docx");
         doc.write(out);
@@ -58,9 +48,7 @@ public class ReportService {
 
     }
 
-    public void createTableByFields(List<Issue> issues, List<JiraNode> fields) throws IOException {
-        Resource resource = new ClassPathResource("template.docx");
-        XWPFDocument doc = new XWPFDocument(resource.getInputStream());
+    public void createTableByFields(List<Issue> issues, List<JiraNode> fields, XWPFDocument doc) throws IOException {
 
         XWPFTable table = doc.createTable(issues.size()+1, fields.size());
         table.setStyleID("LightShading-Accent1");
@@ -71,10 +59,7 @@ public class ReportService {
             r1.setBold(true);
             r1.setText(fields.get(cols).getName().toUpperCase());
             r1.setItalic(true);
-//            r1.setColor("90C3D4");
-
         }
-
 
         for (int i = 0; i < issues.size(); i++){
             Issue issue = issues.get(i);
@@ -83,10 +68,6 @@ public class ReportService {
                 table.getRow(row).getCell(cols).setText(issue.getValueByNode(fields.get(cols)));
             }
         }
-
-        FileOutputStream out = new FileOutputStream("simple.docx");
-        doc.write(out);
-        out.close();
 
     }
 
