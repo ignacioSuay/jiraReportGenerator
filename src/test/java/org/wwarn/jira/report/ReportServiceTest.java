@@ -1,5 +1,6 @@
 package org.wwarn.jira.report;
 
+import junit.framework.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,25 +44,25 @@ public class ReportServiceTest {
         reportService.createWordDocument(issueList);
     }
 
-    @Test
-    public void testCreateTableByFields() throws Exception {
-        List<Issue> issueList = getListIssues();
-        List<JiraNode> fields = Arrays.asList(JiraNode.TITLE, JiraNode.ASSIGNEE, JiraNode.CREATED, JiraNode.SPRINT, JiraNode.EPIC_LINK);
-        reportService.createTableByFields(issueList, fields);
-    }
+//    @Test
+//    public void testCreateTableByFields() throws Exception {
+//        List<Issue> issueList = getListIssues();
+//        List<JiraNode> fields = Arrays.asList(JiraNode.TITLE, JiraNode.ASSIGNEE, JiraNode.CREATED, JiraNode.SPRINT, JiraNode.EPIC_LINK);
+//        reportService.createTableByFields(issueList, fields);
+//    }
 
     @Test
     public void testGroupIssuesBy() throws Exception {
         List<Issue> issueList = getListIssues();
         Map<String, List<Issue>> stringListMap = reportService.groupIssuesBy(issueList, JiraNode.ASSIGNEE);
-        assert stringListMap != null;
+        assertNotNull(stringListMap);
     }
 
     private List<Issue> getListIssues() throws Exception {
         File file = new File("/home/suay/dev/jiraReportGenerator/src/test/resources/sprint7.xml");
         FileInputStream f = new FileInputStream(file);
-        List<JiraNode> fields = Arrays.asList(JiraNode.TITLE, JiraNode.ASSIGNEE, JiraNode.CREATED, JiraNode.SPRINT, JiraNode.EPIC_LINK);
         List<Issue> issueList = reportService.jiraToIssueDTO(f);
         return issueList;
     }
+
 }
