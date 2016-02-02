@@ -25,18 +25,12 @@ import static junit.framework.TestCase.assertNotNull;
 @ContextConfiguration("/applicationContext.xml")
 public class ReportServiceTest {
 
+    @Autowired
+    IssueService issueService;
 
     @Autowired
     ReportService reportService;
 
-    @Test
-    public void testJiraToIssueDTO() throws Exception{
-        File file = new File("/home/suay/dev/jiraReportGenerator/src/test/resources/sprint6.xml");
-        FileInputStream f = new FileInputStream(file);
-        List<Issue> issueList = reportService.jiraToIssueDTO(f);
-        assertNotNull(issueList);
-
-    }
 
     @Test
     public void testCreateWordDocument() throws Exception {
@@ -44,24 +38,11 @@ public class ReportServiceTest {
         reportService.createWordDocument(issueList);
     }
 
-//    @Test
-//    public void testCreateTableByFields() throws Exception {
-//        List<Issue> issueList = getListIssues();
-//        List<JiraNode> fields = Arrays.asList(JiraNode.TITLE, JiraNode.ASSIGNEE, JiraNode.CREATED, JiraNode.SPRINT, JiraNode.EPIC_LINK);
-//        reportService.createTableByFields(issueList, fields);
-//    }
-
-    @Test
-    public void testGroupIssuesBy() throws Exception {
-        List<Issue> issueList = getListIssues();
-        Map<String, List<Issue>> stringListMap = reportService.groupIssuesBy(issueList, JiraNode.ASSIGNEE);
-        assertNotNull(stringListMap);
-    }
 
     private List<Issue> getListIssues() throws Exception {
         File file = new File("/home/suay/dev/jiraReportGenerator/src/test/resources/sprint7.xml");
         FileInputStream f = new FileInputStream(file);
-        List<Issue> issueList = reportService.jiraToIssueDTO(f);
+        List<Issue> issueList = issueService.jiraToIssueDTO(f);
         return issueList;
     }
 
