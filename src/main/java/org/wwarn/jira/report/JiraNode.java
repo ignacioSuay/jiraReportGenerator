@@ -24,7 +24,8 @@ public enum JiraNode {
     CUSTOM_FIELD_NAME("customfieldname"),
     CUSTOM_FIELD_VALUE("customfieldvalue"),
     SPRINT("Sprint"),
-    EPIC_LINK("Epic Link");
+    EPIC_LINK("Epic Link"),
+    SECONDS("seconds");
 
 
     String name;

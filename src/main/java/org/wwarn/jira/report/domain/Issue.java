@@ -39,6 +39,8 @@ public class Issue {
 
     String timeEstimate;
 
+    int timeEstimateInSeconds;
+
     List<CustomField> customFields;
 
     public String getTitle() {
@@ -161,6 +163,14 @@ public class Issue {
         this.customFields = customFields;
     }
 
+    public int getTimeEstimateInSeconds() {
+        return timeEstimateInSeconds;
+    }
+
+    public void setTimeEstimateInSeconds(int timeEstimateInSeconds) {
+        this.timeEstimateInSeconds = timeEstimateInSeconds;
+    }
+
     public String getValueByNode(JiraNode node){
         String res = null;
 
@@ -195,7 +205,8 @@ public class Issue {
                 res = getCustomFieldValue(JiraNode.SPRINT.getName());break;
             case EPIC_LINK:
                 res = getCustomFieldValue(JiraNode.EPIC_LINK.getName());break;
-
+            case SECONDS:
+                res = Integer.toString(getTimeEstimateInSeconds());break;
         }
 
         return res;
