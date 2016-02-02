@@ -2,6 +2,7 @@ package org.wwarn.jira.report;
 
 import com.sun.org.apache.xerces.internal.parsers.DOMParser;
 import org.apache.poi.xwpf.usermodel.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
@@ -18,10 +19,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -30,13 +28,15 @@ import java.util.stream.Collectors;
 @Component
 public class ReportService {
 
+    @Autowired
+    IssueService issueService;
 
     public void createWordDocument(List<Issue> issues) throws IOException {
         Resource resource = new ClassPathResource("template.docx");
         XWPFDocument doc = new XWPFDocument(resource.getInputStream());
 
         addSection(doc, "Summary");
-
+        createSummaryTable(issues,doc);
 
         List<JiraNode> fields = Arrays.asList(JiraNode.TITLE, JiraNode.ASSIGNEE, JiraNode.CREATED, JiraNode.SPRINT, JiraNode.EPIC_LINK);
         createTableByFields(issues, fields, doc);
@@ -67,6 +67,27 @@ public class ReportService {
                 table.getRow(row).getCell(cols).setText(issue.getValueByNode(fields.get(cols)));
             }
         }
+    }
+
+    public void createSummaryTable(List<Issue> issues, XWPFDocument doc){
+
+        Map<String, Integer> collect = issues.stream().collect(Collectors.groupingBy(i -> i.getValueByNode(JiraNode.EPIC_LINK),
+                Collectors.summingInt(Issue::getTimeEstimateInSeconds)));
+
+        XWPFTable table = doc.createTable(collect.keySet().size()+1, 2);
+        table.setStyleID("LightShading-Accent1");
+
+        table.getRow(0).getCell(0).setText("Epic");
+        table.getRow(0).getCell(0).setText("Time");
+
+        int row = 1;
+        for(String key: collect.keySet()){
+            table.getRow(row).getCell(0).setText(key);
+            table.getRow(row).getCell(1).setText(collect.get(key).toString());
+            row++;
+        }
+
+
     }
 
     public void addSection(XWPFDocument doc, String title){
