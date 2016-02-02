@@ -56,6 +56,7 @@ public class IssueService {
         issue.setAssignee(getNodeValue(item, JiraNode.ASSIGNEE.name).trim());
         issue.setReporter(getNodeValue(item, JiraNode.REPORTER.name).trim());
         issue.setTimeEstimate(getNodeValue(item, JiraNode.TIME_ESTIMATE.name).trim());
+        issue.setTimeEstimateInSeconds(Integer.parseInt(getAttributeValue(item, JiraNode.TIME_ESTIMATE.name, JiraNode.SECONDS.name)));
 
         try {
             SimpleDateFormat formatter = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss ");
@@ -85,6 +86,13 @@ public class IssueService {
     private String getNodeValue(Element record, String tagName){
         if(record.getElementsByTagName(tagName).getLength() >0)
             return record.getElementsByTagName(tagName).item(0).getFirstChild().getNodeValue();
+
+        return "";
+    }
+
+    private String getAttributeValue(Element record, String tagName, String attribute){
+        if(record.getElementsByTagName(tagName).getLength() >0)
+            return record.getElementsByTagName(tagName).item(0).getAttributes().getNamedItem(attribute).getNodeValue();
 
         return "";
     }
