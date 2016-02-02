@@ -35,9 +35,8 @@ public class ReportService {
         Resource resource = new ClassPathResource("template.docx");
         XWPFDocument doc = new XWPFDocument(resource.getInputStream());
 
-        XWPFParagraph p2 = doc.createParagraph();
-        XWPFRun r2 = p2.createRun();
-        r2.setText("from: ");
+        addSection(doc, "Summary");
+
 
         List<JiraNode> fields = Arrays.asList(JiraNode.TITLE, JiraNode.ASSIGNEE, JiraNode.CREATED, JiraNode.SPRINT, JiraNode.EPIC_LINK);
         createTableByFields(issues, fields, doc);
@@ -68,8 +67,16 @@ public class ReportService {
                 table.getRow(row).getCell(cols).setText(issue.getValueByNode(fields.get(cols)));
             }
         }
-
     }
+
+    public void addSection(XWPFDocument doc, String title){
+        XWPFParagraph p = doc.createParagraph();
+        p.setStyle("Heading1");
+        XWPFRun r1 = p.createRun();
+        r1.setText(title);
+    }
+
+
 
 
 
