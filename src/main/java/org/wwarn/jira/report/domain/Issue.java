@@ -39,6 +39,8 @@ public class Issue {
 
     String timeEstimate;
 
+    String timeOriginalEstimate;
+
     int timeEstimateInSeconds;
 
     List<CustomField> customFields;
@@ -171,6 +173,14 @@ public class Issue {
         this.timeEstimateInSeconds = timeEstimateInSeconds;
     }
 
+    public String getTimeOriginalEstimate() {
+        return timeOriginalEstimate;
+    }
+
+    public void setTimeOriginalEstimate(String timeOriginalEstimate) {
+        this.timeOriginalEstimate = timeOriginalEstimate;
+    }
+
     public String getValueByNode(JiraNode node){
         String res = null;
 
@@ -199,8 +209,10 @@ public class Issue {
                 res = getCreated().toString();break;
             case UPDATED:
                 res = getUpdated().toString();break;
+            case TIME_ORIGINAL_ESTIMATE:
+                res = timeOriginalEstimate; break;
             case TIME_ESTIMATE:
-                res = getSummary();break;
+                res = getTimeEstimate();break;
             case SPRINT:
                 res = getCustomFieldValue(JiraNode.SPRINT.getName());break;
             case EPIC_LINK:
@@ -210,6 +222,14 @@ public class Issue {
         }
 
         return res;
+    }
+
+    public boolean isTask(){
+        return "Task".equals(type);
+    }
+
+    public boolean isEpic(){
+        return "Epic".equals(type);
     }
 
     public String getCustomFieldValue(String field){
