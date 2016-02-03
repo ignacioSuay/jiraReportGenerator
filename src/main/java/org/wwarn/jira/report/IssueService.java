@@ -56,7 +56,7 @@ public class IssueService {
         issue.setAssignee(getNodeValue(item, JiraNode.ASSIGNEE.name).trim());
         issue.setReporter(getNodeValue(item, JiraNode.REPORTER.name).trim());
         issue.setTimeEstimate(getNodeValue(item, JiraNode.TIME_ESTIMATE.name).trim());
-        String estimateInSec = getAttributeValue(item, JiraNode.TIME_ESTIMATE.name, JiraNode.SECONDS.name);
+        String estimateInSec = getAttributeValue(item, JiraNode.TIME_ORIGINAL_ESTIMATE.name, JiraNode.SECONDS.name);
         if(!estimateInSec.isEmpty()) issue.setTimeEstimateInSeconds(Integer.parseInt(estimateInSec));
 
         try {

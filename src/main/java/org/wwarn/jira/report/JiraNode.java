@@ -18,6 +18,7 @@ public enum JiraNode {
     REPORTER("reporter"),
     CREATED("created"),
     UPDATED("updated"),
+    TIME_ORIGINAL_ESTIMATE("timeoriginalestimate"),
     TIME_ESTIMATE("timeestimate"),
     CUSTOM_FIELDS("customfields"),
     CUSTOM_FIELD("customfield"),
