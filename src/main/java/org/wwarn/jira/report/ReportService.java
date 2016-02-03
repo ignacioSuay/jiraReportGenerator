@@ -74,7 +74,7 @@ public class ReportService {
 
     public void createSummaryTable(List<Issue> issues, XWPFDocument doc){
 
-        Map<String, Integer> collect = issues.stream().collect(Collectors.groupingBy(i -> i.getValueByNode(JiraNode.EPIC_LINK),
+        Map<String, Integer> collect = issues.stream().filter(i-> !i.isEpic()).collect(Collectors.groupingBy(i -> i.getValueByNode(JiraNode.EPIC_LINK),
                 Collectors.summingInt(Issue::getTimeEstimateInSeconds)));
 
         XWPFTable table = doc.createTable(collect.keySet().size()+1, 2);
@@ -88,7 +88,7 @@ public class ReportService {
             String epicTitle = getEpicTitle(issues, key);
             table.getRow(row).getCell(0).setText(epicTitle);
             int timeInSeconds = collect.get(key);
-            table.getRow(row).getCell(1).setText(secondsToDDHHMM(timeInSeconds));
+            table.getRow(row).getCell(1).setText(secondsToDDHH(timeInSeconds));
             row++;
         }
 
@@ -106,14 +106,14 @@ public class ReportService {
                 .orElse("unassigned");
     }
 
-    private String secondsToDDHHMM(int seconds){
-        int day = (int)TimeUnit.SECONDS.toDays(seconds);
-        long hours = TimeUnit.SECONDS.toHours(seconds) - (day *24);
-        long minute = TimeUnit.SECONDS.toMinutes(seconds) - (TimeUnit.SECONDS.toHours(seconds)* 60);
+    private String secondsToDDHH(int seconds){
+        long totalHours = TimeUnit.SECONDS.toHours(seconds);
+        int day = (int) (totalHours / 8);
+        long hours = totalHours % 8;
+
         StringBuilder stringBuilder = new StringBuilder();
         if(day>0) stringBuilder.append(day + " days ");
         if(hours>0) stringBuilder.append(hours + " hours ");
-        if(minute>0) stringBuilder.append(minute + " minutes ");
         return stringBuilder.toString();
 
     }
