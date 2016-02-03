@@ -19,7 +19,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalTime;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 /**
@@ -38,6 +40,7 @@ public class ReportService {
         addSection(doc, "Summary");
         createSummaryTable(issues,doc);
 
+        addSection(doc, "List of issues");
         List<JiraNode> fields = Arrays.asList(JiraNode.TITLE, JiraNode.ASSIGNEE, JiraNode.CREATED, JiraNode.SPRINT, JiraNode.EPIC_LINK);
         createTableByFields(issues, fields, doc);
 
@@ -77,16 +80,41 @@ public class ReportService {
         XWPFTable table = doc.createTable(collect.keySet().size()+1, 2);
         table.setStyleID("LightShading-Accent1");
 
-        table.getRow(0).getCell(0).setText("Epic");
-        table.getRow(0).getCell(0).setText("Time");
+        table.getRow(0).getCell(0).setText("Epic title");
+        table.getRow(0).getCell(1).setText("Time");
 
         int row = 1;
         for(String key: collect.keySet()){
-            table.getRow(row).getCell(0).setText(key);
-            table.getRow(row).getCell(1).setText(collect.get(key).toString());
+            String epicTitle = getEpicTitle(issues, key);
+            table.getRow(row).getCell(0).setText(epicTitle);
+            int timeInSeconds = collect.get(key);
+            table.getRow(row).getCell(1).setText(secondsToDDHHMM(timeInSeconds));
             row++;
         }
 
+
+    }
+
+    private String getEpicTitle(List<Issue> issues, String key) {
+        if("not found".equals(key))
+            return "unassigned";
+
+        return issues.stream().filter(i -> "Epic".equals(i.getType()))
+                .filter(i -> i.getKey().equals(key))
+                .map(Issue::getTitle)
+                .findFirst()
+                .orElse("unassigned");
+    }
+
+    private String secondsToDDHHMM(int seconds){
+        int day = (int)TimeUnit.SECONDS.toDays(seconds);
+        long hours = TimeUnit.SECONDS.toHours(seconds) - (day *24);
+        long minute = TimeUnit.SECONDS.toMinutes(seconds) - (TimeUnit.SECONDS.toHours(seconds)* 60);
+        StringBuilder stringBuilder = new StringBuilder();
+        if(day>0) stringBuilder.append(day + " days ");
+        if(hours>0) stringBuilder.append(hours + " hours ");
+        if(minute>0) stringBuilder.append(minute + " minutes ");
+        return stringBuilder.toString();
 
     }
 
