@@ -8,4 +8,4 @@ JIRA QUERY
 2) Click on Advanced
 
 3) Write:
- type=Epic or sprint=7
+type=Epic or (sprint=7 and status=Done)
