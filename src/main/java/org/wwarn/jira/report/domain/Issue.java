@@ -240,6 +240,10 @@ public class Issue {
 
     }
 
+    public String getTitleName(){
+        return title.substring(title.indexOf(']')+2);
+    }
+
     @Override
     public String toString() {
         return "IssueDTO{" +
