@@ -37,10 +37,13 @@ public class ReportService {
         Resource resource = new ClassPathResource("template.docx");
         XWPFDocument doc = new XWPFDocument(resource.getInputStream());
 
-        addSection(doc, "Summary");
+        addSection(doc, "Epic Summary");
         createSummaryTable(issues,doc);
 
-        addSection(doc, "List of issues");
+        addSection(doc, "Tasks completed by Assignee");
+        createAssigneeTable(issues, doc);
+
+        addSection(doc, "List of all issues");
         List<JiraNode> fields = Arrays.asList(JiraNode.TITLE, JiraNode.ASSIGNEE, JiraNode.CREATED, JiraNode.SPRINT, JiraNode.EPIC_LINK);
         createTableByFields(issues, fields, doc);
 
@@ -49,6 +52,7 @@ public class ReportService {
         out.close();
 
     }
+
 
     public void createTableByFields(List<Issue> issues, List<JiraNode> fields, XWPFDocument doc) throws IOException {
 
@@ -91,8 +95,33 @@ public class ReportService {
             table.getRow(row).getCell(1).setText(secondsToDDHH(timeInSeconds));
             row++;
         }
+    }
+
+    public void createAssigneeTable(List<Issue> issues, XWPFDocument doc) {
+        Map<String, List<Issue>> collect = issues.stream()
+                .filter(i -> !i.isEpic())
+                .collect(Collectors.groupingBy(i -> i.getValueByNode(JiraNode.ASSIGNEE)));
 
 
+        for(String assignee: collect.keySet()){
+            addSection(doc, assignee + " tasks");
+            XWPFTable table = doc.createTable(collect.get(assignee).size()+1, 3);
+            table.setStyleID("LightShading-Accent1");
+
+            table.getRow(0).getCell(0).setText("Epic");
+            table.getRow(0).getCell(1).setText("Task");
+            table.getRow(0).getCell(2).setText("Estimated Time");
+            int row = 1;
+            for(Issue issue: collect.get(assignee)){
+                String epicTitle = getEpicTitle(issues, issue.getValueByNode(JiraNode.EPIC_LINK));
+                table.getRow(row).getCell(0).setText(epicTitle);
+                table.getRow(row).getCell(1).setText(issue.getTitleName());
+                table.getRow(row).getCell(2).setText(issue.getTimeOriginalEstimate());
+                row++;
+            }
+
+
+        }
     }
 
     private String getEpicTitle(List<Issue> issues, String key) {
@@ -101,7 +130,7 @@ public class ReportService {
 
         return issues.stream().filter(i -> "Epic".equals(i.getType()))
                 .filter(i -> i.getKey().equals(key))
-                .map(Issue::getTitle)
+                .map(Issue::getTitleName)
                 .findFirst()
                 .orElse("unassigned");
     }
