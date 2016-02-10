@@ -105,21 +105,25 @@ public class ReportService {
 
         for(String assignee: collect.keySet()){
             addSection(doc, assignee + " tasks");
-            XWPFTable table = doc.createTable(collect.get(assignee).size()+1, 3);
+            XWPFTable table = doc.createTable(collect.get(assignee).size()+2, 3);
             table.setStyleID("LightShading-Accent1");
 
             table.getRow(0).getCell(0).setText("Epic");
             table.getRow(0).getCell(1).setText("Task");
             table.getRow(0).getCell(2).setText("Estimated Time");
             int row = 1;
-            for(Issue issue: collect.get(assignee)){
+            List<Issue> issuesPerAssignee = collect.get(assignee);
+            for(Issue issue: issuesPerAssignee){
                 String epicTitle = getEpicTitle(issues, issue.getValueByNode(JiraNode.EPIC_LINK));
                 table.getRow(row).getCell(0).setText(epicTitle);
                 table.getRow(row).getCell(1).setText(issue.getTitleName());
                 table.getRow(row).getCell(2).setText(issue.getTimeOriginalEstimate());
                 row++;
             }
-
+            table.getRow(row).getCell(0).setText("Total");
+            table.getRow(row).getCell(1).setText("");
+            Integer totalTime = issuesPerAssignee.stream().collect(Collectors.summingInt(Issue::getTimeEstimateInSeconds));
+            table.getRow(row).getCell(2).setText(secondsToDDHH(totalTime));
 
         }
     }
