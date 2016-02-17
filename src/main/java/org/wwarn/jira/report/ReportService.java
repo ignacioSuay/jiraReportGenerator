@@ -159,6 +159,7 @@ public class ReportService {
         p.setStyle("Heading1");
         XWPFRun r1 = p.createRun();
         r1.setText(title);
+        r1.addBreak();
     }
 
     public void addSubSection(XWPFDocument doc, String title){
