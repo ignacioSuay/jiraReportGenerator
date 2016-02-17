@@ -58,6 +58,7 @@ public class ReportService {
 
         XWPFTable table = doc.createTable(issues.size()+1, fields.size());
         table.setStyleID("LightShading-Accent1");
+        table.getCTTbl().getTblPr().unsetTblBorders();
 
         for(int cols = 0; cols < fields.size(); cols++){
             XWPFParagraph p1 = table.getRow(0).getCell(cols).getParagraphs().get(0);
@@ -83,6 +84,7 @@ public class ReportService {
 
         XWPFTable table = doc.createTable(collect.keySet().size()+1, 2);
         table.setStyleID("LightShading-Accent1");
+        table.getCTTbl().getTblPr().unsetTblBorders();
 
         table.getRow(0).getCell(0).setText("Epic title");
         table.getRow(0).getCell(1).setText("Time");
@@ -104,8 +106,9 @@ public class ReportService {
 
 
         for(String assignee: collect.keySet()){
-            addSection(doc, assignee + " tasks");
+            addSubSection(doc, assignee + " tasks");
             XWPFTable table = doc.createTable(collect.get(assignee).size()+2, 3);
+            table.getCTTbl().getTblPr().unsetTblBorders();
             table.setStyleID("LightShading-Accent1");
 
             table.getRow(0).getCell(0).setText("Epic");
@@ -154,6 +157,13 @@ public class ReportService {
     public void addSection(XWPFDocument doc, String title){
         XWPFParagraph p = doc.createParagraph();
         p.setStyle("Heading1");
+        XWPFRun r1 = p.createRun();
+        r1.setText(title);
+    }
+
+    public void addSubSection(XWPFDocument doc, String title){
+        XWPFParagraph p = doc.createParagraph();
+        p.setStyle("Heading2");
         XWPFRun r1 = p.createRun();
         r1.setText(title);
     }
