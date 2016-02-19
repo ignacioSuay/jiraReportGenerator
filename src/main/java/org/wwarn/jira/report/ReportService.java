@@ -37,6 +37,8 @@ public class ReportService {
         Resource resource = new ClassPathResource("template.docx");
         XWPFDocument doc = new XWPFDocument(resource.getInputStream());
 
+        changeTitle(doc, "Sprint 7");
+
         addSection(doc, "Epic Summary");
         createSummaryTable(issues,doc);
 
@@ -52,6 +54,26 @@ public class ReportService {
         out.close();
 
     }
+
+    private void changeTitle(XWPFDocument doc, String title) {
+        replaceText(doc, "templateTitle", title);
+    }
+
+    private void replaceText(XWPFDocument doc, String textToFind, String textToReplace) {
+        for (XWPFParagraph p : doc.getParagraphs()) {
+            List<XWPFRun> runs = p.getRuns();
+            if (runs != null) {
+                for (XWPFRun r : runs) {
+                    String text = r.getText(0);
+                    if (text != null && text.contains(textToFind)) {
+                        text = text.replace(textToFind, textToReplace);
+                        r.setText(text, 0);
+                    }
+                }
+            }
+        }
+    }
+
 
 
     public void createTableByFields(List<Issue> issues, List<JiraNode> fields, XWPFDocument doc) throws IOException {
