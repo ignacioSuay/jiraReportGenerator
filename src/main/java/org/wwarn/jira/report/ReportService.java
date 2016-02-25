@@ -33,11 +33,11 @@ public class ReportService {
     @Autowired
     IssueService issueService;
 
-    public void createWordDocument(List<Issue> issues) throws IOException {
-        Resource resource = new ClassPathResource("template.docx");
+    public void createWordDocument(List<Issue> issues, String template) throws IOException {
+        Resource resource = new ClassPathResource(template);
         XWPFDocument doc = new XWPFDocument(resource.getInputStream());
 
-        changeTitle(doc, "Sprint 7");
+        changeTitle(doc, "Sprint 8");
 
         addSection(doc, "Epic Summary");
         createSummaryTable(issues,doc);

@@ -35,12 +35,12 @@ public class ReportServiceTest {
     @Test
     public void testCreateWordDocument() throws Exception {
         List<Issue> issueList = getListIssues();
-        reportService.createWordDocument(issueList);
+        reportService.createWordDocument(issueList, "templateWwarn.docx");
     }
 
 
     private List<Issue> getListIssues() throws Exception {
-        File file = new File("/home/suay/dev/jiraReportGenerator/src/test/resources/sprint7.xml");
+        File file = new File("/home/suay/dev/jiraReportGenerator/src/test/resources/sprint8.xml");
         FileInputStream f = new FileInputStream(file);
         List<Issue> issueList = issueService.jiraToIssueDTO(f);
         return issueList;
